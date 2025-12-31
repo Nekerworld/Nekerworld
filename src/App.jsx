@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import BlogList from './components/BlogList'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import PostDetail from './pages/PostDetail'
 import './App.css'
 
 function App() {
@@ -23,7 +25,10 @@ function App() {
     <div className="app">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="main-content">
-        <BlogList />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/post/:slug" element={<PostDetail />} />
+        </Routes>
       </main>
       <Footer />
     </div>

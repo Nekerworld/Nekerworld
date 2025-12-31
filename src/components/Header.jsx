@@ -1,16 +1,22 @@
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 function Header({ theme, toggleTheme }) {
+  const scrollToTagCloud = () => {
+    // 태그 클라우드로 스크롤 (현재는 홈으로 이동)
+    window.location.href = '/#tags'
+  }
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <a href="/">기술 블로그</a>
+          <Link to="/">Nekerworld</Link>
         </div>
         <nav className="nav">
-          <a href="#home" className="nav-link">홈</a>
-          <a href="#posts" className="nav-link">포스트</a>
-          <a href="#about" className="nav-link">소개</a>
+          <Link to="/" className="nav-link">홈</Link>
+          <Link to="/#tags" className="nav-link" onClick={scrollToTagCloud}>태그</Link>
+          <Link to="/" className="nav-link">시리즈</Link>
         </nav>
         <button 
           className="theme-toggle"
@@ -25,4 +31,3 @@ function Header({ theme, toggleTheme }) {
 }
 
 export default Header
-

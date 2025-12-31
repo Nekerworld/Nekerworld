@@ -1,0 +1,47 @@
+.sort-options-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  justify-content: flex-end;
+}
+
+.sort-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sort-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.sort-select:hover {
+  border-color: var(--accent-color);
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+@media (max-width: 768px) {
+  .sort-options-container {
+    justify-content: flex-start;
+  }
+
+  .sort-select {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+  }
+}
+

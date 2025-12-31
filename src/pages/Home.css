@@ -1,0 +1,19 @@
+.home-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.home-main {
+  flex: 1;
+  min-width: 0; /* flexbox에서 overflow 방지 */
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 0 1rem;
+  }
+}
+
