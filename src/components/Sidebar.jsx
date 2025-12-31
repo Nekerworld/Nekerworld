@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { getAllPosts, sortPostsByDate } from '../utils/postsData'
 import { getTagCounts, getSortedTags } from '../utils/search'
+import RandomPost from './RandomPost'
+import BlogStats from './BlogStats'
 import './Sidebar.css'
 
 function Sidebar() {
@@ -12,6 +14,10 @@ function Sidebar() {
 
   return (
     <aside className="sidebar">
+      <RandomPost />
+      
+      <BlogStats />
+
       <div className="sidebar-section">
         <h3 className="sidebar-title">인기 태그</h3>
         <div className="sidebar-tags">
@@ -55,6 +61,13 @@ function Sidebar() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="sidebar-section">
+        <Link to="/all-posts" className="sidebar-all-posts-link">
+          <span className="sidebar-all-posts-icon">📚</span>
+          <span>모든 문서 보기</span>
+        </Link>
       </div>
     </aside>
   )

@@ -15,8 +15,8 @@ function Header({ theme, toggleTheme }) {
         </div>
         <nav className="nav">
           <Link to="/" className="nav-link">홈</Link>
+          <Link to="/all-posts" className="nav-link">모든 문서</Link>
           <Link to="/#tags" className="nav-link" onClick={scrollToTagCloud}>태그</Link>
-          <Link to="/" className="nav-link">시리즈</Link>
         </nav>
         <button 
           className="theme-toggle"

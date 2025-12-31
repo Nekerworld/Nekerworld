@@ -74,54 +74,66 @@
   font-weight: 500;
 }
 
+.post-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
 .post-content {
+  min-width: 0; /* flexbox/grid overflow 방지 */
+}
+
+.post-content-main {
   color: var(--text-primary);
   line-height: 1.8;
   font-size: 1.1rem;
 }
 
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
+.post-content-main h1,
+.post-content-main h2,
+.post-content-main h3,
+.post-content-main h4,
+.post-content-main h5,
+.post-content-main h6 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
   color: var(--text-primary);
   line-height: 1.4;
+  scroll-margin-top: 100px; /* 목차 링크 클릭 시 여백 */
 }
 
-.post-content h1 {
+.post-content-main h1 {
   font-size: 2rem;
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
-.post-content h2 {
+.post-content-main h2 {
   font-size: 1.75rem;
 }
 
-.post-content h3 {
+.post-content-main h3 {
   font-size: 1.5rem;
 }
 
-.post-content p {
+.post-content-main p {
   margin-bottom: 1.5rem;
 }
 
-.post-content ul,
-.post-content ol {
+.post-content-main ul,
+.post-content-main ol {
   margin-bottom: 1.5rem;
   padding-left: 2rem;
 }
 
-.post-content li {
+.post-content-main li {
   margin-bottom: 0.5rem;
 }
 
-.post-content blockquote {
+.post-content-main blockquote {
   border-left: 4px solid var(--accent-color);
   padding-left: 1.5rem;
   margin: 1.5rem 0;
@@ -129,7 +141,7 @@
   font-style: italic;
 }
 
-.post-content code {
+.post-content-main code {
   background: var(--bg-secondary);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
@@ -138,7 +150,7 @@
   color: var(--accent-color);
 }
 
-.post-content pre {
+.post-content-main pre {
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
@@ -146,7 +158,7 @@
   border: 1px solid var(--border-color);
 }
 
-.post-content pre code {
+.post-content-main pre code {
   background: none !important;
   padding: 0;
   color: inherit;
@@ -154,36 +166,36 @@
   line-height: 1.6;
 }
 
-.post-content a {
+.post-content-main a {
   color: var(--accent-color);
   text-decoration: underline;
 }
 
-.post-content a:hover {
+.post-content-main a:hover {
   text-decoration: none;
 }
 
-.post-content img {
+.post-content-main img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 1.5rem 0;
 }
 
-.post-content table {
+.post-content-main table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
 }
 
-.post-content th,
-.post-content td {
+.post-content-main th,
+.post-content-main td {
   border: 1px solid var(--border-color);
   padding: 0.75rem;
   text-align: left;
 }
 
-.post-content th {
+.post-content-main th {
   background: var(--bg-secondary);
   font-weight: bold;
 }
@@ -265,7 +277,11 @@
     font-size: 1.1rem;
   }
 
-  .post-content {
+  .post-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .post-content-main {
     font-size: 1rem;
   }
 

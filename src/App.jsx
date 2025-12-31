@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import PostDetail from './pages/PostDetail'
+import AllPosts from './pages/AllPosts'
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:slug" element={<PostDetail />} />
+          <Route path="/all-posts" element={<AllPosts />} />
         </Routes>
       </main>
       <Footer />

@@ -11,10 +11,13 @@ import { getPostBySlug, getPostContent, getAllPosts } from '../utils/postsData'
 import { parseMarkdown } from '../utils/postParser'
 import { getSeriesNavigation } from '../utils/series'
 import { getRelatedPosts } from '../utils/relatedPosts'
+import { findDocumentLinks } from '../utils/wiki'
 import SeriesNavigation from '../components/SeriesNavigation'
 import RelatedPosts from '../components/RelatedPosts'
 import ShareButtons from '../components/ShareButtons'
 import Comments from '../components/Comments'
+import TableOfContents from '../components/TableOfContents'
+import DocumentHistory from '../components/DocumentHistory'
 import './PostDetail.css'
 
 function getCodeStyle() {
@@ -109,32 +112,37 @@ function PostDetail() {
         <SeriesNavigation seriesInfo={seriesInfo} currentSlug={slug} />
       )}
 
-      <div className="post-content">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            code({ node, inline, className, children, ...props }) {
-              const match = /language-(\w+)/.exec(className || '')
-              return !inline && match ? (
-                <SyntaxHighlighter
-                  style={getCodeStyle()}
-                  language={match[1]}
-                  PreTag="div"
-                  {...props}
-                >
-                  {String(children).replace(/\n$/, '')}
-                </SyntaxHighlighter>
-              ) : (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              )
-            }
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+      <div className="post-content-wrapper">
+        <div className="post-content-main">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code({ node, inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '')
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    style={getCodeStyle()}
+                    language={match[1]}
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                )
+              }
+            }}
+          >
+            {content}
+          </ReactMarkdown>
+        </div>
+        <TableOfContents content={content} />
       </div>
+
+      <DocumentHistory slug={slug} />
 
       <ShareButtons 
         title={post.title}
