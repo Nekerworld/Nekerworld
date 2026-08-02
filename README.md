@@ -22,39 +22,6 @@ English version will be added soon.
 
 ---
 
-# 안녕하세요.
-
-저는 **김윤성(Yoonsung Kim)** 입니다.
-
-전자공학을 전공했으며, 현재 **SSAFY**에서 소프트웨어를 공부하고 있습니다.
-
-웹 프론트엔드부터 백엔드, 인공지능, 임베디드 시스템까지 하나의 제품을 직접 설계하고 구현하는 것을 좋아합니다.
-
-일반적으로 말하는 웹 Full Stack이 아니라,
-
-> **Hardware부터 Software까지 모두 이해하는 Full Stack Engineer**
-
-를 목표로 공부하고 있습니다.
-
----
-
-# 💭 Development Philosophy
-
-> 개발은 기능을 만드는 과정이 아니라,
-> 기술을 통해 사용자의 경험을 어떻게 향상시킬 것인가를 고민하는 과정이라고 생각합니다.
-
-저는 AI, Web, Embedded를 각각 배우는 것이 아니라
-
-**이들을 연결하여 실제 문제를 해결하는 제품을 만드는 것**을 목표로 합니다.
-
-단순히 모델을 학습시키거나 웹사이트를 만드는 것보다,
-
-**"하드웨어에서 발생한 데이터를 AI가 분석하고, 이를 웹 서비스까지 연결하는 전체 시스템"**
-
-을 설계하는 개발자가 되고 싶습니다.
-
----
-
 # 👨‍💻 About Me
 
 ```cpp
@@ -180,20 +147,6 @@ public:
 
 ---
 
-## Tools
-
-<p>
-
-<img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visualstudiocode"/>
-
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git"/>
-
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
-
-</p>
-
----
-
 <p align="center">
 
 <!-- ============================================ -->
@@ -239,12 +192,6 @@ public:
 - Sensor Fusion 알고리즘 구현
 - QC 및 시스템 테스트
 
-## 💡 Problem
-
-기존 의료용 추종 로봇은 대부분 LiDAR 기반으로 제작되어 높은 가격, 높은 연산량, 유지보수 비용 증가 등의 문제가 존재합니다.
-
-본 프로젝트에서는 **LiDAR 없이도** UWB, , AI Camera(HuskyLens), 초음파 센서만으로 안정적인 환자 추종이 가능하도록 설계했습니다.
-
 ## 📂 Repository
 
 👉 https://github.com/Wake-Up-It-s-a-Hospital
@@ -277,12 +224,6 @@ public:
 - Frontend Developer
 
 - UI / UX Designer
-
-## 💡 Problem
-
-GitHub PR 리뷰는 리뷰 품질 편차, 리뷰 시간 증가, 협업 효율 저하 등의 문제가 있습니다.
-
-이를 해결하기 위해 LLM(Deepseek)을 이용한 자동 코드 리뷰 플랫폼을 개발했습니다.
 
 ## 📂 Repository
 
@@ -332,60 +273,6 @@ GitHub PR 리뷰는 리뷰 품질 편차, 리뷰 시간 증가, 협업 효율 �
 
 본 연구에서는 이러한 문제를 해결하기 위해 다음 두 단계를 결합한  
 **Retrieve–then–Rank 구조의 하이브리드 추천 시스템**을 제안했습니다.
-
-1. Matrix Factorization 기반 모델을 이용해 전체 상품에서 후보군을 빠르게 검색
-2. Graph Neural Network를 이용해 후보 상품을 정밀하게 재정렬
-
-또한 실제 전자상거래 환경을 고려하여 상품의 재고 상태를 추천 점수에 반영하는  
-**Availability-Aware Scoring Mechanism**을 설계했습니다.
-
----
-
-### 🏗 Proposed Architecture
-
-```text
-Raw Interaction Data
-        │
-        ▼
-Data Preprocessing
-  ├─ Time-aware Split
-  ├─ Noise Filtering
-  └─ Feature Construction
-        │
-        ▼
-Candidate Retrieval
-  ├─ ALS
-  └─ MF-BPR
-        │
-        ▼
-Top-K Candidate Set
-        │
-        ▼
-GNN Re-ranking
-  └─ LightGCN
-        │
-        ▼
-Hybrid Score Integration
-        │
-        ▼
-Availability-Aware Ranking
-        │
-        ▼
-Final Recommendation
-```
-
----
-
-### 아키텍처의 핵심 요소들
-
-| Stage | Description |
-|------|-------------|
-| Data preprocessing | 시간 순서 기반 데이터 분할 및 이상 행동 제거 |
-| Candidate retrieval | ALS와 MF-BPR을 이용한 후보 상품 생성 |
-| Graph construction | 사용자·상품·속성·카테고리를 포함한 이종 그래프 구성 |
-| Re-ranking | LightGCN을 이용한 후보 상품 재정렬 |
-| Score fusion | MF 점수와 GNN 점수 정규화 및 통합 |
-| Availability weighting | 재고 가용성을 최종 추천 점수에 반영 |
 
 ---
 
@@ -503,48 +390,6 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
 
 ---
 
-<br><br>
-
-<!-- ============================================ -->
-<!--              Education & Experience          -->
-<!-- ============================================ -->
-
-<h1 align="center">
-🎓 Education & Experience
-</h1>
-
----
-
-## 🏫 Education
-
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <strong>한국공학대학교</strong>
-    </td>
-    <td width="50%">
-      전자공학 전공
-    </td>
-    <td align="center">
-      Graduated (BoE)
-    </td>
-  </tr>
-
-  <tr>
-    <td align="center">
-      <strong>SSAFY</strong>
-    </td>
-    <td>
-      Samsung Software Academy For Youth
-    </td>
-    <td align="center">
-      Software Development
-    </td>
-  </tr>
-</table>
-
----
-
 ## 기반 지식
 
 전자공학을 전공하며 다음 영역을 학습하고 프로젝트에 적용했습니다.
@@ -578,49 +423,6 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
 | Certification | Organization | Acquired |
 |---------------|--------------|----------|
 | 데이터분석 준전문가 ADsP | 한국데이터산업진흥원 | 2026.06 |
-
----
-
-<br><br>
-
-<!-- ============================================ -->
-<!--                Personal Info                 -->
-<!-- ============================================ -->
-
-<h1 align="center">
-🧾 Profile
-</h1>
-
-<table align="center">
-  <tr>
-    <td><strong>Name</strong></td>
-    <td>김윤성 · Yoonsung Kim</td>
-  </tr>
-  <tr>
-    <td><strong>GitHub</strong></td>
-    <td>Nekerworld</td>
-  </tr>
-  <tr>
-    <td><strong>Birth</strong></td>
-    <td>2001.09.19</td>
-  </tr>
-  <tr>
-    <td><strong>Major</strong></td>
-    <td>전자공학과<br>Electronic Engineering</td>
-  </tr>
-  <tr>
-    <td><strong>Minor</strong></td>
-    <td>인공지능융합전공<br>Artificial Intelligence</td>
-  </tr>
-  <tr>
-    <td><strong>한국공학대학교</strong></td>
-    <td>SSAFY</td>
-  </tr>
-  <tr>
-    <td><strong>Interests</strong></td>
-    <td>Artificial Intelligence · Embedded Systems · Web Development</td>
-  </tr>
-</table>
 
 ---
 
@@ -688,25 +490,6 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
 | GitHub | [github.com/Nekerworld](https://github.com/Nekerworld) |
 | Velog | [velog.io/@nekerworld](https://velog.io/@nekerworld/posts) |
 | Email | [chrisabc94@gmail.com](mailto:chrisabc94@gmail.com) |
-
----
-
-<br><br>
-
-<!-- ============================================ -->
-<!--                  Visitors                    -->
-<!-- ============================================ -->
-
-<h1 align="center">
-👀 Visitors
-</h1>
-
-<p align="center">
-  <img
-    src="https://komarev.com/ghpvc/?username=Nekerworld&label=Profile%20Views&color=0e75b6&style=for-the-badge"
-    alt="Nekerworld Profile Views"
-  />
-</p>
 
 ---
 
