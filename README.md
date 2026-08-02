@@ -88,17 +88,7 @@ public:
 };
 ```
 
----
-
-# 🔥 Currently
-
-- 🌱 Frontend (CSS) 공부 중
-- 🌱 JavaScript 심화 학습
-- 🌱 PyTorch 기반 딥러닝 모델 구현
-
----
-
-# 🛠 Tech Stack
+# 🛠 Tech Stacks
 
 ## Programming Languages
 
@@ -204,20 +194,6 @@ public:
 
 ---
 
-# 📊 Skill Overview
-
-| Category | Main |
-|----------|------|
-| Programming | Python · C · C++ |
-| Frontend | React · Vite · Vue |
-| Backend | Django |
-| AI | PyTorch · TensorFlow · Keras |
-| Embedded | STM32 · ESP32 |
-| Database | MySQL · Firebase |
-| CAD | Quartus · PSpice |
-
----
-
 <p align="center">
 
 <!-- ============================================ -->
@@ -236,11 +212,7 @@ public:
 
 ---
 
-# 🏥 Smart Patient-Following IV Pole
-
-### 환자 추종 스마트 링거폴대 (Capstone Design)
-
-> 저가형 센서 융합을 이용한 Mapless 환자 추종 의료 보조 시스템
+# [환자 추종 스마트 링거폴대](https://github.com/Wake-Up-It-s-a-Hospital)
 
 <p align="center">
 
@@ -253,13 +225,9 @@ public:
 >
 > 프로젝트 GIF 또는 이미지 삽입
 
----
-
 ## 🏆 Achievement
 
 - 🥇 전자공학부 **학부장상**
-
----
 
 ## 👨‍💻 My Role
 
@@ -271,68 +239,11 @@ public:
 - Sensor Fusion 알고리즘 구현
 - QC 및 시스템 테스트
 
----
-
 ## 💡 Problem
 
-기존 의료용 추종 로봇은 대부분 LiDAR 기반으로 제작되어
+기존 의료용 추종 로봇은 대부분 LiDAR 기반으로 제작되어 높은 가격, 높은 연산량, 유지보수 비용 증가 등의 문제가 존재합니다.
 
-- 높은 가격
-- 높은 연산량
-- 유지보수 비용 증가
-
-등의 문제가 존재합니다.
-
-본 프로젝트에서는
-
-**LiDAR 없이도**
-
-- UWB
-- Camera(HuskyLens)
-- 초음파 센서
-
-만으로 안정적인 환자 추종이 가능하도록 설계했습니다.
-
----
-
-## ⚙️ Features
-
-- 📍 UWB 기반 상대 위치 추정
-- 👤 YOLO 기반 환자 인식
-- 📷 HuskyLens Camera
-- 🚧 장애물 회피
-- 🚶 곡률 기반 자연스러운 추종
-- ⚖️ 수액 무게 측정
-- 📈 수액 데이터 서버 연동
-
----
-
-## 🛠 Tech Stack
-
-| Category | Stack |
-|----------|-------|
-| Language | Python / C / C++ |
-| AI | YOLO |
-| MCU | STM32 |
-| Sensors | UWB / HuskyLens / Ultrasonic / LoadCell |
-| Motion | Differential Drive |
-| Cloud | AWS |
-
----
-
-## 📌 My Contribution
-
-✔ YOLO 기반 환자 인식
-
-✔ 곡률 기반 추종 알고리즘 설계
-
-✔ STM32 주행 로직 개선
-
-✔ Mapless 상대 위치 추종 구현
-
-✔ 전체 시스템 품질 테스트(QC)
-
----
+본 프로젝트에서는 **LiDAR 없이도** UWB, , AI Camera(HuskyLens), 초음파 센서만으로 안정적인 환자 추종이 가능하도록 설계했습니다.
 
 ## 📂 Repository
 
@@ -342,9 +253,7 @@ public:
 
 <br><br>
 
-# 🤖 Refactory
-
-### AI Code Review Assistant
+# 🤖 [Refactory](https://github.com/2024-Winter-BootCamp-TeamD)
 
 > LLM 기반 자동 코드 리뷰 플랫폼
 
@@ -359,76 +268,21 @@ public:
 >
 > 프로젝트 GIF 삽입
 
----
-
 ## 🏆 Achievement
 
 🥉 **Techeer Winter BootCamp 공동 3위**
 
----
-
 ## 👨‍💻 My Role
 
-Frontend Developer
+- Frontend Developer
 
-UI / UX Designer
-
----
+- UI / UX Designer
 
 ## 💡 Problem
 
-GitHub PR 리뷰는
+GitHub PR 리뷰는 리뷰 품질 편차, 리뷰 시간 증가, 협업 효율 저하 등의 문제가 있습니다.
 
-- 리뷰 품질 편차
-- 리뷰 시간 증가
-- 협업 효율 저하
-
-등의 문제가 있습니다.
-
-이를 해결하기 위해
-
-LLM을 이용한
-
-자동 코드 리뷰 플랫폼을 개발했습니다.
-
----
-
-## ⚙️ Features
-
-- AI 코드 리뷰
-- 코드 품질 분석
-- 리뷰 결과 시각화
-- Chart.js 기반 통계
-- PDF Report
-- 다양한 Review Mode
-
----
-
-## 🛠 Tech Stack
-
-| Category | Stack |
-|----------|-------|
-| Frontend | React + Vite |
-| Styling | Styled-components |
-| Visualization | Chart.js |
-| AI | LLM |
-| Version Control | GitHub API |
-
----
-
-## 📌 My Contribution
-
-✔ 전체 UI 설계
-
-✔ UX 개선
-
-✔ 데이터 시각화
-
-✔ Chart.js Dashboard
-
-✔ 반응형 페이지 구현
-
----
+이를 해결하기 위해 LLM(Deepseek)을 이용한 자동 코드 리뷰 플랫폼을 개발했습니다.
 
 ## 📂 Repository
 
@@ -436,118 +290,17 @@ LLM을 이용한
 
 ---
 
-<br><br>
-
-# 🌱 Smart Hydroponic Farm
-
-### 수경재배식 스마트팜
-
-> YOLO 기반 작물 성장 분석 시스템
-
-<p align="center">
-
-<!-- TODO -->
-<img src="./assets/smartfarm.gif" width="90%">
-
-</p>
-
-> **📌 TODO**
->
-> 프로젝트 이미지 삽입
-
----
-
-## 🏆 Achievement
-
-🥇 **최우수상**
-
----
-
-## 👨‍💻 My Role
-
-Embedded Engineer
-
-Computer Vision Engineer
-
----
-
-## 💡 Problem
-
-작물 재배는
-
-- 성장 상태 확인
-- 광량 조절
-- 관리 자동화
-
-등을 사람이 직접 수행해야 하는 문제가 있습니다.
-
----
-
-## ⚙️ Features
-
-- 🌿 YOLOv8 성장 단계 분석
-- 💡 UV Light 제어
-- 🌱 자동 생육 관리
-- 📷 Webcam 기반 작물 인식
-- 📊 Dashboard 모니터링
-
----
-
-## 🛠 Tech Stack
-
-| Category | Stack |
-|----------|-------|
-| Language | C |
-| MCU | STM32 / ESP32 |
-| Vision | YOLOv8 |
-| Sensor | Webcam |
-
----
-
-## 📌 My Contribution
-
-✔ 회로 설계
-
-✔ STM32 제어
-
-✔ ESP32 제어
-
-✔ YOLOv8 성장 판단 모델
-
-✔ UV Light 기반 생장 사이클 설계
-
-✔ Dashboard 제어 시스템
-
----
-
-## 📂 Repository
-
-Private Project
-
----
-
 <br>
 
 <h1 align="center">
-⚡ More Projects
+⚡ 더 많은 프로젝트 보기
 </h1>
 
 | Project | Description |
 |----------|-------------|
-| Recommendation System | Hybrid Retrieve-then-Rank Recommendation Framework |
-| SSAFY Projects | SSAFY 과정 중 진행한 프로젝트 |
-| Vue Practice | Vue 기반 학습 프로젝트 |
-| React Study | React 학습 저장소 |
-| Machine Learning | 다양한 AI 실험 코드 |
-| Embedded Practice | MCU 및 센서 제어 실습 |
+| Recommendation System | Hybrid Retrieve-then-Rank Recommendation Framework 구축 |
 
 ---
-
-<p align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Nekerworld&theme=github-compact&hide_border=true"/>
-
-</p>
 
 <br><br>
 
@@ -570,20 +323,6 @@ Private Project
 ## 📄 A Hybrid Retrieve–then–Rank Framework Integrating Matrix Factorization and Graph Neural Networks
 
 > 대규모 전자상거래 환경을 위한 Matrix Factorization과 Graph Neural Network 기반 하이브리드 추천 시스템
-
-<p align="center">
-
-<img
-  src="https://img.shields.io/badge/Role-First%20Author-58A6FF?style=for-the-badge"
-/>
-<img
-  src="https://img.shields.io/badge/Status-Revision%20Pending-F7B93E?style=for-the-badge"
-/>
-<img
-  src="https://img.shields.io/badge/Journal-Expert%20Systems%20with%20Applications-2C5364?style=for-the-badge"
-/>
-
-</p>
 
 ---
 
@@ -637,7 +376,7 @@ Final Recommendation
 
 ---
 
-### ⚙️ Core Components
+### 아키텍처의 핵심 요소들
 
 | Stage | Description |
 |------|-------------|
@@ -650,61 +389,15 @@ Final Recommendation
 
 ---
 
-### 🧠 Models & Methods
-
-<p>
-
-<img src="https://img.shields.io/badge/ALS-Matrix%20Factorization-3776AB?style=flat-square"/>
-<img src="https://img.shields.io/badge/MF--BPR-Pairwise%20Ranking-00599C?style=flat-square"/>
-<img src="https://img.shields.io/badge/LightGCN-Graph%20Neural%20Network-EE4C2C?style=flat-square"/>
-<img src="https://img.shields.io/badge/Isolation%20Forest-Anomaly%20Detection-FF6F00?style=flat-square"/>
-<img src="https://img.shields.io/badge/Retrieve--then--Rank-Recommendation-8A2BE2?style=flat-square"/>
-
-</p>
-
----
-
-### 🛠 Research Stack
-
-| Category | Stack |
-|----------|-------|
-| Language | Python |
-| Deep Learning | PyTorch |
-| Recommendation | ALS · BPR · LightGCN |
-| Graph Learning | Heterogeneous Graph · Graph Neural Network |
-| Data Processing | NumPy · Pandas |
-| Evaluation | Recall@K · NDCG@K |
-| Dataset | RetailRocket E-commerce Dataset |
-
----
-
-### 📌 My Contribution
-
-✔ 연구 문제 정의 및 전체 추천 구조 설계
-
-✔ Matrix Factorization 기반 후보 생성 모델 구축
-
-✔ LightGCN 기반 그래프 재정렬 구조 설계
-
-✔ 사용자·상품·속성·카테고리 기반 이종 그래프 구성
-
-✔ 재고 가용성을 반영한 최종 추천 점수 설계
-
-✔ 실험 설계 및 비교 모델 분석
-
-✔ 논문 작성 및 제1저자 수행
-
----
-
-### 📰 Publication Status
+### 📰 논문의 현재 상태
 
 | Item | Information |
 |------|-------------|
-| Role | First Author |
-| Journal | Expert Systems with Applications |
-| Publisher | ScienceDirect / Elsevier |
-| Status | First submission completed · Revision pending |
-| Field | Recommender Systems · Graph Neural Networks |
+| 저자 | 제 1 저자 |
+| 저널 | [Expert Systems with Applications](https://www.sciencedirect.com/journal/expert-systems-with-applications) |
+| 출판사 | ScienceDirect |
+| 현황 | 최초 제출 후 리비전 대기중 |
+| 분야 | Recommender Systems · Graph Neural Networks |
 
 > 논문은 현재 심사 과정에 있으며, 게재 상태가 변경되면 업데이트할 예정입니다.
 
@@ -810,23 +503,6 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
 
 ---
 
-## 🏅 Award Summary
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/학부장상-Smart%20IV%20Pole-FFD700?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/최우수상-Smart%20Farm-FFD700?style=for-the-badge"/>
-
-<br>
-
-<img src="https://img.shields.io/badge/은상-JetRacer-C0C0C0?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/공동%203위-Refactory-CD7F32?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/장려상-EV3%20Robot-708090?style=for-the-badge"/>
-
-</p>
-
----
-
 <br><br>
 
 <!-- ============================================ -->
@@ -849,8 +525,8 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
     <td width="50%">
       전자공학 전공
     </td>
-    <td align="center" width="25%">
-      Graduate (BoE)
+    <td align="center">
+      Graduated (BoE)
     </td>
   </tr>
 
@@ -869,23 +545,7 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
 
 ---
 
-## 💻 SSAFY
-
-> 체계적인 소프트웨어 교육을 통해 웹 개발과 컴퓨터 과학의 기초를 학습하고 있습니다.
-
-### Currently Learning
-
-- JavaScript
-- Web Frontend
-- CSS
-- Data Structures
-- Algorithms
-- Computer Science
-- Team-based Software Development
-
----
-
-## 📚 Academic Background
+## 기반 지식
 
 전자공학을 전공하며 다음 영역을 학습하고 프로젝트에 적용했습니다.
 
@@ -901,37 +561,6 @@ AI, Embedded Systems, Robotics 분야의 프로젝트와 경진대회에서 얻�
 
 ---
 
-## 🧩 Interdisciplinary Approach
-
-```text
-Electronic Engineering
-        │
-        ├── Circuit Design
-        ├── Embedded Systems
-        └── Sensor Control
-                │
-                ▼
-        Artificial Intelligence
-        ├── Computer Vision
-        ├── Deep Learning
-        └── Recommendation System
-                │
-                ▼
-          Software Development
-        ├── Frontend
-        ├── Backend
-        └── Data Visualization
-                │
-                ▼
-           Complete Product
-```
-
-저는 하나의 기술 영역에만 머무르기보다,  
-회로와 MCU에서 시작해 AI 모델과 사용자 인터페이스까지 연결되는  
-전체 시스템을 이해하고 구현하는 것을 지향합니다.
-
----
-
 <br><br>
 
 <!-- ============================================ -->
@@ -939,16 +568,10 @@ Electronic Engineering
 <!-- ============================================ -->
 
 <h1 align="center">
-📜 Certifications
+📜 자격증
 </h1>
 
 ---
-
-<p align="center">
-
-<img
-  src="https://img.shields.io/badge/ADsP-데이터분석%20준전문가-4479A1?style=for-the-badge"
-/>
 
 </p>
 
@@ -979,14 +602,18 @@ Electronic Engineering
   </tr>
   <tr>
     <td><strong>Birth</strong></td>
-    <td>TODO: 생년 또는 생년월일 입력</td>
+    <td>2001.09.19</td>
   </tr>
   <tr>
     <td><strong>Major</strong></td>
-    <td>Electronic Engineering</td>
+    <td>전자공학과<br>Electronic Engineering</td>
   </tr>
   <tr>
-    <td><strong>Education</strong></td>
+    <td><strong>Minor</strong></td>
+    <td>인공지능융합전공<br>Artificial Intelligence</td>
+  </tr>
+  <tr>
+    <td><strong>한국공학대학교</strong></td>
     <td>SSAFY</td>
   </tr>
   <tr>
@@ -997,12 +624,6 @@ Electronic Engineering
 
 ---
 
-<br>
-
-<h2 align="center">
-📊 GitHub Activity & Contact
-</h2>
-
 <!-- ============================================ -->
 <!--              GitHub Statistics               -->
 <!-- ============================================ -->
@@ -1010,22 +631,11 @@ Electronic Engineering
 <br>
 
 <h1 align="center">
-📊 GitHub Statistics
+📊 GitHub 통계
 </h1>
 
 <p align="center">
 꾸준히 학습하고, 구현한 내용을 코드와 기록으로 남기고 있습니다.
-</p>
-
----
-
-## 🏆 GitHub Trophy
-
-<p align="center">
-  <img
-    src="https://github-profile-trophy.vercel.app/?username=Nekerworld&theme=algolia&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=4"
-    alt="Nekerworld GitHub Trophy"
-  />
 </p>
 
 ---
@@ -1047,20 +657,6 @@ Electronic Engineering
 
 ---
 
-## 💻 Most Used Languages
-
-<p align="center">
-  <img
-    width="52%"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nekerworld&layout=compact&theme=github_dark&hide_border=true&langs_count=10"
-    alt="Nekerworld Top Languages"
-  />
-</p>
-
-> GitHub 언어 통계는 저장소 내 코드 비율을 기반으로 하며, 실제 기술 숙련도와 반드시 일치하지는 않습니다.
-
----
-
 ## 📊 Contribution Activity
 
 <p align="center">
@@ -1070,133 +666,6 @@ Electronic Engineering
     alt="Nekerworld GitHub Activity Graph"
   />
 </p>
-
----
-
-## 🗂 Profile Summary
-
-<p align="center">
-  <img
-    width="95%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nekerworld&theme=github_dark"
-    alt="Nekerworld Profile Details"
-  />
-</p>
-
-<p align="center">
-  <img
-    width="32%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Nekerworld&theme=github_dark"
-    alt="Repositories per Language"
-  />
-  <img
-    width="32%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Nekerworld&theme=github_dark"
-    alt="Most Commit Language"
-  />
-  <img
-    width="32%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Nekerworld&theme=github_dark&utcOffset=9"
-    alt="Productive Time"
-  />
-</p>
-
----
-
-<br><br>
-
-<!-- ============================================ -->
-<!--               Current Goals                  -->
-<!-- ============================================ -->
-
-<h1 align="center">
-🎯 Current Goals
-</h1>
-
----
-
-## 🌱 Currently Learning
-
-<table>
-  <tr>
-    <td align="center" width="25%">
-      <strong>Frontend</strong>
-    </td>
-    <td width="75%">
-      JavaScript와 CSS를 중심으로 사용자 경험을 개선하는 인터페이스 구현
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <strong>Deep Learning</strong>
-    </td>
-    <td>
-      TensorFlow로 작성된 모델을 PyTorch로 재구현하고 리팩터링하는 연습
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <strong>PyTorch</strong>
-    </td>
-    <td>
-      데이터 전처리부터 모델 설계, 학습, 평가까지 전체 파이프라인 구축
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <strong>Computer Science</strong>
-    </td>
-    <td>
-      자료구조, 운영체제, 컴퓨터 구조 및 네트워크 기초 학습
-    </td>
-  </tr>
-</table>
-
----
-
-## 🛣 Learning Roadmap
-
-```text
-JavaScript & CSS
-        │
-        ▼
-Modern Frontend Development
-        │
-        ├── React
-        ├── Vue
-        └── UI / UX
-        │
-        ▼
-PyTorch Fundamentals
-        │
-        ├── Tensor Operations
-        ├── Dataset & DataLoader
-        ├── Training Loop
-        └── Model Evaluation
-        │
-        ▼
-TensorFlow → PyTorch Refactoring
-        │
-        ▼
-Custom Deep Learning Architecture
-        │
-        ▼
-AI-based Product Development
-```
-
----
-
-## ✅ Short-Term Goal
-
-> TensorFlow와 Keras로 작성된 딥러닝 코드를 분석하고,  
-> 동일한 구조와 동작을 PyTorch로 직접 리팩터링할 수 있는 수준에 도달하기
-
----
-
-## 🚀 Long-Term Goal
-
-> PyTorch를 이용해 문제 정의부터 데이터 전처리, 모델 설계, 학습, 평가와 서비스 적용까지  
-> 독립적으로 수행할 수 있는 AI Engineer가 되기
 
 ---
 
@@ -1214,36 +683,7 @@ AI-based Product Development
 프로젝트, 개발, 연구와 관련된 연락을 환영합니다.
 </p>
 
-<p align="center">
-
-<a href="mailto:chrisabc94@gmail.com">
-  <img
-    src="https://img.shields.io/badge/Email-chrisabc94%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"
-    alt="Email"
-  />
-</a>
-
-<a href="https://velog.io/@nekerworld/posts">
-  <img
-    src="https://img.shields.io/badge/Velog-Nekerworld-20C997?style=for-the-badge&logo=velog&logoColor=white"
-    alt="Velog"
-  />
-</a>
-
-<a href="https://github.com/Nekerworld">
-  <img
-    src="https://img.shields.io/badge/GitHub-Nekerworld-181717?style=for-the-badge&logo=github&logoColor=white"
-    alt="GitHub"
-  />
-</a>
-
-</p>
-
----
-
-## 🔗 Links
-
-| Platform | Link |
+| 플랫폼 | 링크 |
 |----------|------|
 | GitHub | [github.com/Nekerworld](https://github.com/Nekerworld) |
 | Velog | [velog.io/@nekerworld](https://velog.io/@nekerworld/posts) |
