@@ -281,7 +281,7 @@ public:
 | Item | Information |
 |------|-------------|
 | 저자 | 제 1 저자 |
-| 저널 | [Expert Systems with Applications](https://www.sciencedirect.com/journal/expert-systems-with-applications) |
+| 저널 | IEEE Access |
 | 출판사 | ScienceDirect |
 | 현황 | 최초 제출 후 리비전 대기중 |
 | 분야 | Recommender Systems · Graph Neural Networks |
