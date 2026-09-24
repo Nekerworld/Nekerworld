@@ -1,0 +1,80 @@
+<svg width="1100" height="270" viewBox="0 0 1100 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="270" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#07111F"/>
+    <stop offset="0.52" stop-color="#0B1727"/>
+    <stop offset="1" stop-color="#08131E"/>
+  </linearGradient>
+  <linearGradient id="signal" x1="42" y1="0" x2="1058" y2="0" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#4CC9F0"/>
+    <stop offset="0.55" stop-color="#7AA2F7"/>
+    <stop offset="1" stop-color="#9D7CD8"/>
+  </linearGradient>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+    <path d="M28 0H0V28" fill="none" stroke="#8BA4C7" stroke-opacity="0.05"/>
+  </pattern>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <style>
+    .mono { font-family:'JetBrains Mono','SFMono-Regular',Consolas,monospace; }
+    .sans { font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+    .dim { fill:#8B9BB4; }
+    .bright { fill:#EAF2FF; }
+    .line { stroke:url(#signal); stroke-width:1.5; stroke-linecap:round; }
+    .node { fill:#0B1727; stroke:#6EA8FE; stroke-width:1.25; }
+    .pulse { fill:#7DD3FC; filter:url(#glow); }
+  </style>
+</defs>
+
+<rect width="1100" height="270" rx="18" fill="url(#bg)"/>
+<rect width="1100" height="270" rx="18" fill="url(#grid)"/>
+<rect x="1" y="1" width="1098" height="268" rx="17" stroke="#7AA2F7" stroke-opacity="0.18"/>
+
+<text x="48" y="42" class="sans bright" font-size="17" font-weight="700">환자 추종 스마트 링거폴대</text>
+<text x="48" y="65" class="mono dim" font-size="10.5" letter-spacing=".8">UWB · VISION · SENSOR FUSION · CONTROL</text>
+
+<!-- signal wires and pulses: deliberately behind cards -->
+<g>
+<line x1="172" y1="156" x2="240" y2="156" class="line" opacity="0.58"/><line x1="390" y1="156" x2="458" y2="156" class="line" opacity="0.58"/><line x1="608" y1="156" x2="676" y2="156" class="line" opacity="0.58"/><line x1="826" y1="156" x2="894" y2="156" class="line" opacity="0.58"/>
+<circle r="4" cy="156" class="pulse">
+  <animate attributeName="cx" values="172;240" dur="1.15s" begin="0s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;0" dur="1.15s" begin="0s" repeatCount="indefinite"/>
+</circle><circle r="4" cy="156" class="pulse">
+  <animate attributeName="cx" values="390;458" dur="1.15s" begin="0.22s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;0" dur="1.15s" begin="0.22s" repeatCount="indefinite"/>
+</circle><circle r="4" cy="156" class="pulse">
+  <animate attributeName="cx" values="608;676" dur="1.15s" begin="0.44s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;0" dur="1.15s" begin="0.44s" repeatCount="indefinite"/>
+</circle><circle r="4" cy="156" class="pulse">
+  <animate attributeName="cx" values="826;894" dur="1.15s" begin="0.66s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;1;0" dur="1.15s" begin="0.66s" repeatCount="indefinite"/>
+</circle>
+</g>
+
+<!-- cards: drawn after signal layer, therefore always above pulse -->
+<g>
+  <rect x="42" y="120" width="130" height="72" rx="10" class="node"/>
+  <text x="107.0" y="148" text-anchor="middle" class="mono bright" font-size="13" font-weight="700">환자</text>
+  <text x="107.0" y="170" text-anchor="middle" class="mono dim" font-size="10">TARGET</text>
+</g><g>
+  <rect x="240" y="120" width="150" height="72" rx="10" class="node"/>
+  <text x="315.0" y="148" text-anchor="middle" class="mono bright" font-size="13" font-weight="700">센서 입력</text>
+  <text x="315.0" y="170" text-anchor="middle" class="mono dim" font-size="10">UWB · VISION</text>
+</g><g>
+  <rect x="458" y="120" width="150" height="72" rx="10" class="node"/>
+  <text x="533.0" y="148" text-anchor="middle" class="mono bright" font-size="13" font-weight="700">센서 융합</text>
+  <text x="533.0" y="170" text-anchor="middle" class="mono dim" font-size="10">거리 · 방향</text>
+</g><g>
+  <rect x="676" y="120" width="150" height="72" rx="10" class="node"/>
+  <text x="751.0" y="148" text-anchor="middle" class="mono bright" font-size="13" font-weight="700">추종 제어</text>
+  <text x="751.0" y="170" text-anchor="middle" class="mono dim" font-size="10">거리 · 방향 · 곡률</text>
+</g><g>
+  <rect x="894" y="120" width="164" height="72" rx="10" class="node"/>
+  <text x="976.0" y="148" text-anchor="middle" class="mono bright" font-size="13" font-weight="700">STM32 · 구동부</text>
+  <text x="976.0" y="170" text-anchor="middle" class="mono dim" font-size="10">MOTOR · STEERING</text>
+</g>
+
+<text x="550" y="232" text-anchor="middle" class="mono dim" font-size="10.5" letter-spacing=".65">UWB / VISION → SENSOR FUSION → CURVATURE-BASED TRACKING → MOTOR CONTROL</text>
+</svg>
