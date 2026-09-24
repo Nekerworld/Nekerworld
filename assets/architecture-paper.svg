@@ -1,0 +1,350 @@
+<svg width="1100" height="270" viewBox="0 0 1100 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.52" stop-color="#0B1727"/>
+      <stop offset="1" stop-color="#08131E"/>
+    </linearGradient>
+
+    <linearGradient id="signal" x1="42" y1="0" x2="1058" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4CC9F0"/>
+      <stop offset="0.52" stop-color="#7AA2F7"/>
+      <stop offset="1" stop-color="#9D7CD8"/>
+    </linearGradient>
+
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#8BA4C7" stroke-opacity="0.05"/>
+    </pattern>
+
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .mono {
+        font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+      }
+
+      .sans {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      .bright { fill:#EAF2FF; }
+      .dim { fill:#8B9BB4; }
+
+      .line {
+        stroke:url(#signal);
+        stroke-width:1.5;
+        stroke-linecap:round;
+      }
+
+      .node {
+        fill:#0D1B2C;
+        stroke:#6EA8FE;
+        stroke-width:1.25;
+      }
+
+      .node-ranking {
+        fill:#0D1B2C;
+        stroke:#9D7CD8;
+        stroke-width:1.25;
+      }
+
+      .pulse {
+        fill:#7DD3FC;
+        filter:url(#glow);
+      }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1100" height="270" rx="18" fill="url(#bg)"/>
+  <rect width="1100" height="270" rx="18" fill="url(#grid)"/>
+  <rect
+    x="1"
+    y="1"
+    width="1098"
+    height="268"
+    rx="17"
+    stroke="#7AA2F7"
+    stroke-opacity="0.18"
+  />
+
+  <!-- title -->
+  <text
+    x="48"
+    y="42"
+    class="sans bright"
+    font-size="17"
+    font-weight="700"
+  >
+    Retrieve–then–Rank Recommendation Framework
+  </text>
+
+  <text
+    x="48"
+    y="65"
+    class="mono dim"
+    font-size="10.5"
+    letter-spacing="0.8"
+  >
+    MATRIX FACTORIZATION RETRIEVAL · GRAPH NEURAL NETWORK RANKING
+  </text>
+
+
+  <!-- =====================================================
+       CONNECTION LAYER
+       카드보다 먼저 렌더링 → pulse가 카드 위로 보이지 않음
+       ===================================================== -->
+
+  <g>
+    <line x1="202" y1="155" x2="252" y2="155" class="line" opacity="0.58"/>
+    <line x1="412" y1="155" x2="462" y2="155" class="line" opacity="0.58"/>
+    <line x1="622" y1="155" x2="672" y2="155" class="line" opacity="0.58"/>
+    <line x1="832" y1="155" x2="882" y2="155" class="line" opacity="0.58"/>
+
+    <circle r="4" cy="155" class="pulse">
+      <animate attributeName="cx" values="202;252" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle r="4" cy="155" class="pulse">
+      <animate attributeName="cx" values="412;462" dur="1.2s" begin="0.25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.25s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle r="4" cy="155" class="pulse">
+      <animate attributeName="cx" values="622;672" dur="1.2s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle r="4" cy="155" class="pulse">
+      <animate attributeName="cx" values="832;882" dur="1.2s" begin="0.75s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="1.2s" begin="0.75s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+
+  <!-- =====================================================
+       01 · ITEM SPACE
+       ===================================================== -->
+
+  <g>
+    <rect x="42" y="115" width="160" height="80" rx="10" class="node"/>
+
+    <text
+      x="122"
+      y="145"
+      text-anchor="middle"
+      class="mono bright"
+      font-size="14"
+      font-weight="700"
+    >
+      전체 상품
+    </text>
+
+    <text
+      x="122"
+      y="169"
+      text-anchor="middle"
+      class="mono dim"
+      font-size="11"
+    >
+      ITEM SPACE
+    </text>
+  </g>
+
+
+  <!-- =====================================================
+       02 · MF RETRIEVAL
+       ===================================================== -->
+
+  <g>
+    <rect x="252" y="115" width="160" height="80" rx="10" class="node"/>
+
+    <text
+      x="332"
+      y="145"
+      text-anchor="middle"
+      class="mono bright"
+      font-size="14"
+      font-weight="700"
+    >
+      Matrix Factorization
+    </text>
+
+    <text
+      x="332"
+      y="169"
+      text-anchor="middle"
+      class="mono"
+      fill="#65D6F7"
+      font-size="11"
+      font-weight="700"
+    >
+      RETRIEVAL
+    </text>
+  </g>
+
+
+  <!-- =====================================================
+       03 · TOP-K
+       Retrieval과 Ranking 사이의 Bridge
+       ===================================================== -->
+
+  <g>
+    <rect x="462" y="115" width="160" height="80" rx="10" class="node"/>
+
+    <text
+      x="542"
+      y="145"
+      text-anchor="middle"
+      class="mono bright"
+      font-size="14"
+      font-weight="700"
+    >
+      후보 상품군
+    </text>
+
+    <text
+      x="542"
+      y="169"
+      text-anchor="middle"
+      class="mono dim"
+      font-size="11"
+      font-weight="700"
+    >
+      TOP-K CANDIDATES
+    </text>
+  </g>
+
+
+  <!-- =====================================================
+       04 · GNN RANKING
+       ===================================================== -->
+
+  <g>
+    <rect x="672" y="115" width="160" height="80" rx="10" class="node-ranking"/>
+
+    <text
+      x="752"
+      y="145"
+      text-anchor="middle"
+      class="mono bright"
+      font-size="14"
+      font-weight="700"
+    >
+      Graph Neural Network
+    </text>
+
+    <text
+      x="752"
+      y="169"
+      text-anchor="middle"
+      class="mono"
+      fill="#B69AF0"
+      font-size="11"
+      font-weight="700"
+    >
+      RANKING
+    </text>
+  </g>
+
+
+  <!-- =====================================================
+       05 · FINAL RECOMMENDATION
+       ===================================================== -->
+
+  <g>
+    <rect x="882" y="115" width="176" height="80" rx="10" class="node-ranking"/>
+
+    <text
+      x="970"
+      y="145"
+      text-anchor="middle"
+      class="mono bright"
+      font-size="14"
+      font-weight="700"
+    >
+      최종 추천
+    </text>
+
+    <text
+      x="970"
+      y="169"
+      text-anchor="middle"
+      class="mono dim"
+      font-size="11"
+      font-weight="700"
+    >
+      RECOMMENDATION
+    </text>
+  </g>
+
+
+  <!-- =====================================================
+       STAGE LABELS
+       ===================================================== -->
+
+  <g>
+    <!-- Retrieval -->
+    <line
+      x1="252"
+      y1="218"
+      x2="622"
+      y2="218"
+      stroke="#4CC9F0"
+      stroke-width="1"
+      stroke-opacity="0.55"
+    />
+
+    <circle cx="252" cy="218" r="2" fill="#4CC9F0"/>
+    <circle cx="622" cy="218" r="2" fill="#4CC9F0"/>
+
+    <text
+      x="437"
+      y="238"
+      text-anchor="middle"
+      class="mono"
+      fill="#65D6F7"
+      font-size="10"
+      font-weight="700"
+      letter-spacing="1"
+    >
+      RETRIEVAL · 후보 공간 축소
+    </text>
+
+
+    <!-- Ranking -->
+    <line
+      x1="672"
+      y1="218"
+      x2="1058"
+      y2="218"
+      stroke="#9D7CD8"
+      stroke-width="1"
+      stroke-opacity="0.55"
+    />
+
+    <circle cx="672" cy="218" r="2" fill="#9D7CD8"/>
+    <circle cx="1058" cy="218" r="2" fill="#9D7CD8"/>
+
+    <text
+      x="865"
+      y="238"
+      text-anchor="middle"
+      class="mono"
+      fill="#B69AF0"
+      font-size="10"
+      font-weight="700"
+      letter-spacing="1"
+    >
+      RANKING · 정밀 재정렬
+    </text>
+  </g>
+
+</svg>
