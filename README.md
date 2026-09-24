@@ -1,35 +1,47 @@
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="Yoonsung Kim — Electronic Engineering × Artificial Intelligence" />
+  <img src="./assets/constellation-header.svg" width="100%" alt="Yoonsung Kim — Engineering Constellation"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Nekerworld"><img src="https://img.shields.io/badge/GitHub-Nekerworld-181717?style=flat-square&logo=github" /></a>
-  <a href="https://velog.io/@nekerworld/posts"><img src="https://img.shields.io/badge/Velog-nekerworld-20C997?style=flat-square&logo=velog&logoColor=white" /></a>
-  <a href="mailto:chrisabc94@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/Nekerworld">
+    <img src="https://img.shields.io/badge/GitHub-Nekerworld-181717?style=flat-square&logo=github"/>
+  </a>
+  <a href="https://velog.io/@nekerworld/posts">
+    <img src="https://img.shields.io/badge/Velog-nekerworld-20C997?style=flat-square&logo=velog&logoColor=white"/>
+  </a>
+  <a href="mailto:chrisabc94@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white"/>
+  </a>
 </p>
-
-<p align="center"><b>Building intelligent systems from hardware to AI.</b></p>
 
 ---
 
-## About Me
+# 👨‍💻 About Me
 
-<p align="center">
-  <img src="./assets/about.svg" width="100%" alt="About Yoonsung Kim" />
-</p>
+전자공학을 기반으로 **Embedded Systems, Robotics, Computer Vision, Artificial Intelligence**를 공부하고 있습니다.
 
-전자공학을 기반으로 **Embedded Systems, Robotics, Computer Vision, Artificial Intelligence**를 공부하고 있습니다. 단일 모델이나 기능에 머무르기보다 센서와 MCU, 제어 알고리즘, AI 모델, 소프트웨어를 연결해 **실제 환경에서 동작하는 하나의 시스템**을 만드는 데 관심이 있습니다.
+단순히 하나의 모델이나 기능을 구현하는 것보다 센서와 MCU에서 시작해 제어, AI 모델, 소프트웨어까지 연결하여 **실제 환경에서 동작하는 하나의 시스템을 만드는 과정**에 관심이 있습니다.
 
-| Highlight | |
+프로젝트를 통해 STM32·ESP32 기반 임베디드 제어, 로봇 주행 및 추종 알고리즘, Computer Vision, Deep Learning, Web Service 등을 경험했습니다.
+
+현재는 **Hardware와 AI를 연결하는 Intelligent System**과 실제 서비스 환경에서 활용할 수 있는 AI 기술에 관심을 가지고 있습니다.
+
+<br>
+
+## ✦ Highlights
+
+| | |
 |---|---|
 | 🏆 **5 Awards** | Embedded · Robotics · AI 프로젝트 및 경진대회 |
 | 📄 **First-author Research** | Hybrid Recommendation System · IEEE Access 심사 진행 |
-| 🤖 **End-to-End Engineering** | Sensor → Embedded → Control → AI → Service |
-| 🎓 **Electronic Engineering × AI** | 한국공학대학교 · SSAFY |
+| 🤖 **System Development** | Embedded Hardware → Control → AI → Software |
+| 🎓 **Electronic Engineering** | Artificial Intelligence 융합 전공 |
 
 ---
 
-## Featured Projects
+<br>
+
+# 🚀 Featured Projects
 
 ### 🏥 Autonomous Smart IV Pole
 

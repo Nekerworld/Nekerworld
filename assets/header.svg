@@ -1,83 +1,518 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
-  <style>
-    text { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; font-size: 14px; dominant-baseline: middle; }
-    @keyframes cl0 { 0%,0% { opacity: 0 } 2%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes cl1 { 0%,5% { opacity: 0 } 7%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes cl2 { 0%,10% { opacity: 0 } 12%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes cl3 { 0%,15% { opacity: 0 } 17%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes cl4 { 0%,20% { opacity: 0 } 22%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes cl5 { 0%,25% { opacity: 0 } 27%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes cl6 { 0%,30% { opacity: 0 } 32%,88% { opacity: 1 } 95%,100% { opacity: 0 } }
-    @keyframes blink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
-    .cl0 { animation: cl0 12s ease-in-out infinite }
-    .cl1 { animation: cl1 12s ease-in-out infinite }
-    .cl2 { animation: cl2 12s ease-in-out infinite }
-    .cl3 { animation: cl3 12s ease-in-out infinite }
-    .cl4 { animation: cl4 12s ease-in-out infinite }
-    .cl5 { animation: cl5 12s ease-in-out infinite }
-    .cl6 { animation: cl6 12s ease-in-out infinite }
-  </style>
-  <!-- Window background -->
-  <rect width="100%" height="100%" fill="#1e1e1e" rx="14" ry="14"/>
+```xml
+<svg
+  width="1200"
+  height="480"
+  viewBox="0 0 1200 480"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Yoonsung Kim Engineering Constellation</title>
+  <desc id="desc">
+    A constellation connecting Embedded Systems, Robotics,
+    Computer Vision, Artificial Intelligence and Software.
+  </desc>
 
-  <!-- Title bar -->
-  <rect x="0" y="0" width="800" height="30" fill="#2c2c2c" rx="14" ry="14"/>
-  <rect x="0" y="16" width="800" height="14" fill="#2c2c2c"/>
-  <g opacity="0.55">
-    <circle cx="22" cy="15" r="5.5" fill="#ff5f57"/>
-    <circle cx="40" cy="15" r="5.5" fill="#febc2e"/>
-    <circle cx="58" cy="15" r="5.5" fill="#28c840"/>
-  </g>
-  <text x="400" y="16" fill="#6a737d" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle" dominant-baseline="middle">profile.json</text>
+  <defs>
+    <!-- Background -->
+    <radialGradient id="space" cx="50%" cy="42%" r="80%">
+      <stop offset="0%" stop-color="#101c36"/>
+      <stop offset="45%" stop-color="#080f21"/>
+      <stop offset="100%" stop-color="#030711"/>
+    </radialGradient>
 
-  <!-- Tab bar -->
-  <rect x="0" y="30" width="800" height="32" fill="#2c2c2c"/>
-  <rect x="0" y="30" width="156" height="32" fill="#252525"/>
-  <!-- Active tab pill -->
-  <rect x="156" y="30" width="160" height="32" fill="#1e1e1e"/>
-  <rect x="156" y="30" width="160" height="2" fill="#569cd6"/>
-  <text x="172" y="46" fill="#d4d4d4" font-family="ui-monospace, monospace" font-size="11" dominant-baseline="middle">profile.json</text>
-  <text x="300" y="46" fill="#6a737d" font-family="ui-monospace, monospace" font-size="11" dominant-baseline="middle">×</text>
+    <!-- Central glow -->
+    <radialGradient id="centerGlow">
+      <stop offset="0%" stop-color="#8ecaff" stop-opacity=".20"/>
+      <stop offset="45%" stop-color="#4a8fd8" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#030711" stop-opacity="0"/>
+    </radialGradient>
 
-  <!-- Sidebar -->
-  <rect x="0" y="62" width="156" height="238" fill="#252525"/>
-  <text x="20" y="74" fill="#6a737d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.2" dominant-baseline="middle">EXPLORER</text>
-  <rect x="0" y="86" width="156" height="22" fill="#d4d4d4" fill-opacity="0.06"/><text x="20" y="100" fill="#d4d4d4" font-size="12" dominant-baseline="middle">header.svg</text>
-  <text x="20" y="122" fill="#6a737d" font-size="12" dominant-baseline="middle">about.svg</text>
-  <text x="20" y="144" fill="#6a737d" font-size="12" dominant-baseline="middle">skills.svg</text>
-  <text x="20" y="166" fill="#6a737d" font-size="12" dominant-baseline="middle">gh-stats.svg</text>
-  <text x="20" y="188" fill="#6a737d" font-size="12" dominant-baseline="middle">footer.svg</text>
-  <!-- Vertical divider between sidebar and editor -->
-  <line x1="156" y1="62" x2="156" y2="300" stroke="#353535" stroke-width="1"/>
+    <!-- Star glow -->
+    <filter id="starGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-  <!-- Editor body -->
-  <g class="cl0">
-    <text x="184" y="132" fill="#6a737d" text-anchor="end" font-size="12">1</text>
-    <g transform="translate(194 132)"><text x="0" fill="#d4d4d4">{</text></g>
+    <filter id="strongGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shooting star gradient -->
+    <linearGradient id="shootingTrail" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#a8d8ff" stop-opacity=".9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================================ -->
+  <!-- BACKGROUND                       -->
+  <!-- ================================ -->
+
+  <rect width="1200" height="480" rx="22" fill="url(#space)"/>
+  <ellipse cx="600" cy="235" rx="430" ry="250" fill="url(#centerGlow)"/>
+
+  <!-- ================================ -->
+  <!-- DISTANT STAR FIELD               -->
+  <!-- ================================ -->
+
+  <g fill="#ffffff">
+
+    <circle cx="56" cy="54" r="1.1" opacity=".45"/>
+    <circle cx="112" cy="112" r=".8" opacity=".55"/>
+    <circle cx="170" cy="42" r="1.4" opacity=".65"/>
+    <circle cx="222" cy="91" r=".7" opacity=".4"/>
+    <circle cx="284" cy="35" r=".9" opacity=".5"/>
+    <circle cx="337" cy="123" r="1.2" opacity=".65"/>
+    <circle cx="395" cy="64" r=".7" opacity=".45"/>
+    <circle cx="458" cy="102" r="1.3" opacity=".55"/>
+    <circle cx="514" cy="46" r=".8" opacity=".45"/>
+    <circle cx="568" cy="91" r="1.1" opacity=".7"/>
+    <circle cx="630" cy="38" r=".7" opacity=".45"/>
+    <circle cx="684" cy="103" r="1.2" opacity=".55"/>
+    <circle cx="743" cy="56" r=".8" opacity=".5"/>
+    <circle cx="811" cy="91" r="1.1" opacity=".65"/>
+    <circle cx="872" cy="41" r=".7" opacity=".45"/>
+    <circle cx="932" cy="117" r="1.3" opacity=".55"/>
+    <circle cx="994" cy="55" r=".8" opacity=".45"/>
+    <circle cx="1053" cy="95" r="1.1" opacity=".65"/>
+    <circle cx="1122" cy="44" r=".8" opacity=".55"/>
+    <circle cx="1160" cy="139" r="1.3" opacity=".45"/>
+
+    <circle cx="73" cy="208" r=".8" opacity=".45"/>
+    <circle cx="143" cy="267" r="1.2" opacity=".6"/>
+    <circle cx="207" cy="191" r=".7" opacity=".4"/>
+    <circle cx="272" cy="245" r="1" opacity=".5"/>
+    <circle cx="916" cy="222" r=".8" opacity=".5"/>
+    <circle cx="1008" cy="271" r="1.1" opacity=".6"/>
+    <circle cx="1082" cy="194" r=".7" opacity=".45"/>
+    <circle cx="1150" cy="247" r="1.3" opacity=".55"/>
+
+    <circle cx="45" cy="367" r=".8" opacity=".4"/>
+    <circle cx="106" cy="419" r="1.2" opacity=".55"/>
+    <circle cx="184" cy="348" r=".7" opacity=".45"/>
+    <circle cx="252" cy="435" r="1.1" opacity=".55"/>
+    <circle cx="326" cy="379" r=".8" opacity=".4"/>
+    <circle cx="405" cy="437" r="1.2" opacity=".6"/>
+    <circle cx="484" cy="385" r=".7" opacity=".45"/>
+    <circle cx="718" cy="411" r=".8" opacity=".5"/>
+    <circle cx="792" cy="369" r="1.2" opacity=".55"/>
+    <circle cx="866" cy="436" r=".7" opacity=".4"/>
+    <circle cx="944" cy="378" r="1.1" opacity=".6"/>
+    <circle cx="1027" cy="428" r=".8" opacity=".45"/>
+    <circle cx="1104" cy="351" r="1.3" opacity=".55"/>
+    <circle cx="1163" cy="420" r=".7" opacity=".4"/>
+
   </g>
-  <g class="cl1">
-    <text x="184" y="154" fill="#6a737d" text-anchor="end" font-size="12">2</text>
-    <g transform="translate(194 154)"><text x="0" xml:space="preserve"><tspan fill="#d4d4d4">  </tspan><tspan fill="#569cd6">&quot;name&quot;</tspan><tspan fill="#d4d4d4">: </tspan><tspan fill="#ce9178">&quot;Yoonsung Kim&quot;</tspan><tspan fill="#d4d4d4">,</tspan></text></g>
+
+  <!-- Twinkling background stars -->
+
+  <g fill="#b9ddff">
+    <circle cx="151" cy="157" r="1.5">
+      <animate attributeName="opacity" values=".25;1;.25" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1040" cy="148" r="1.6">
+      <animate attributeName="opacity" values=".3;.9;.3" dur="6.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="344" cy="325" r="1.4">
+      <animate attributeName="opacity" values=".2;.9;.2" dur="5.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="875" cy="329" r="1.5">
+      <animate attributeName="opacity" values=".3;1;.3" dur="7s" repeatCount="indefinite"/>
+    </circle>
   </g>
-  <g class="cl2">
-    <text x="184" y="176" fill="#6a737d" text-anchor="end" font-size="12">3</text>
-    <g transform="translate(194 176)"><text x="0" xml:space="preserve"><tspan fill="#d4d4d4">  </tspan><tspan fill="#569cd6">&quot;role&quot;</tspan><tspan fill="#d4d4d4">: </tspan><tspan fill="#ce9178">&quot;Embedded AI Engineer&quot;</tspan><tspan fill="#d4d4d4">,</tspan></text></g>
+
+  <!-- ================================ -->
+  <!-- CONSTELLATION LINES              -->
+  <!-- ================================ -->
+
+  <g
+    fill="none"
+    stroke="#76baff"
+    stroke-width="1.1"
+    stroke-opacity=".35"
+  >
+    <!-- Embedded -> Robotics -->
+    <line x1="250" y1="183" x2="416" y2="124"/>
+
+    <!-- Robotics -> AI -->
+    <line x1="416" y1="124" x2="738" y2="121"/>
+
+    <!-- AI -> Computer Vision -->
+    <line x1="738" y1="121" x2="935" y2="205"/>
+
+    <!-- Computer Vision -> Software -->
+    <line x1="935" y1="205" x2="826" y2="337"/>
+
+    <!-- Software -> Embedded -->
+    <line x1="826" y1="337" x2="250" y2="183"/>
+
+    <!-- Robotics -> center -->
+    <line x1="416" y1="124" x2="600" y2="237"/>
+
+    <!-- AI -> center -->
+    <line x1="738" y1="121" x2="600" y2="237"/>
+
+    <!-- CV -> center -->
+    <line x1="935" y1="205" x2="600" y2="237"/>
+
+    <!-- Embedded -> center -->
+    <line x1="250" y1="183" x2="600" y2="237"/>
+
+    <!-- Software -> center -->
+    <line x1="826" y1="337" x2="600" y2="237"/>
   </g>
-  <g class="cl3">
-    <text x="184" y="198" fill="#6a737d" text-anchor="end" font-size="12">4</text>
-    <g transform="translate(194 198)"><text x="0" xml:space="preserve"><tspan fill="#d4d4d4">  </tspan><tspan fill="#569cd6">&quot;org&quot;</tspan><tspan fill="#d4d4d4">: </tspan><tspan fill="#ce9178">&quot;TUKorea · SSAFY&quot;</tspan><tspan fill="#d4d4d4">,</tspan></text></g>
+
+  <!-- ================================ -->
+  <!-- PROJECT STARS                    -->
+  <!-- ================================ -->
+
+  <!-- Smart IV Pole -->
+  <g>
+    <circle cx="455" cy="193" r="3.2" fill="#d9efff" filter="url(#starGlow)">
+      <animate attributeName="r" values="3.2;4;3.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+
+    <text
+      x="444"
+      y="214"
+      text-anchor="end"
+      fill="#8299b8"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="10"
+      letter-spacing=".7"
+    >
+      SMART IV POLE
+    </text>
   </g>
-  <g class="cl4">
-    <text x="184" y="220" fill="#6a737d" text-anchor="end" font-size="12">5</text>
-    <g transform="translate(194 220)"><text x="0" xml:space="preserve"><tspan fill="#d4d4d4">  </tspan><tspan fill="#569cd6">&quot;location&quot;</tspan><tspan fill="#d4d4d4">: </tspan><tspan fill="#ce9178">&quot;Seoul, Korea&quot;</tspan><tspan fill="#d4d4d4">,</tspan></text></g>
+
+  <!-- Refactory -->
+  <g>
+    <circle cx="731" cy="291" r="2.8" fill="#d9efff" filter="url(#starGlow)">
+      <animate attributeName="opacity" values=".65;1;.65" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <text
+      x="744"
+      y="308"
+      fill="#8299b8"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="10"
+      letter-spacing=".7"
+    >
+      REFACTORY
+    </text>
   </g>
-  <g class="cl5">
-    <text x="184" y="242" fill="#6a737d" text-anchor="end" font-size="12">6</text>
-    <g transform="translate(194 242)"><text x="0" xml:space="preserve"><tspan fill="#d4d4d4">  </tspan><tspan fill="#569cd6">&quot;tagline&quot;</tspan><tspan fill="#d4d4d4">: </tspan><tspan fill="#ce9178">&quot;From circuits to intelligence — building complete systems.&quot;</tspan><tspan dx="-0.15em" fill="#d4d4d4" font-weight="700" style="animation: blink 1s steps(1) infinite">|</tspan></text></g>
+
+  <!-- Recommendation -->
+  <g>
+    <circle cx="762" cy="164" r="2.8" fill="#d9efff" filter="url(#starGlow)">
+      <animate attributeName="opacity" values=".6;1;.6" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <text
+      x="778"
+      y="167"
+      fill="#8299b8"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="10"
+      letter-spacing=".7"
+    >
+      RECOMMENDATION
+    </text>
   </g>
-  <g class="cl6">
-    <text x="184" y="264" fill="#6a737d" text-anchor="end" font-size="12">7</text>
-    <g transform="translate(194 264)"><text x="0" fill="#d4d4d4">}</text></g>
+
+  <!-- ================================ -->
+  <!-- MAIN CONSTELLATION STARS         -->
+  <!-- ================================ -->
+
+  <!-- Embedded -->
+  <g>
+    <circle cx="250" cy="183" r="5" fill="#dff2ff" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values=".75;1;.75" dur="5s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="250" cy="183" r="11" fill="none" stroke="#8ecaff" stroke-opacity=".17"/>
+
+    <text
+      x="228"
+      y="164"
+      text-anchor="end"
+      fill="#b7cbe3"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="12"
+      letter-spacing="1.6"
+    >
+      EMBEDDED SYSTEMS
+    </text>
+
+    <text
+      x="228"
+      y="180"
+      text-anchor="end"
+      fill="#657d9d"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="9"
+    >
+      STM32 · ESP32 · C/C++
+    </text>
   </g>
+
+  <!-- Robotics -->
+  <g>
+    <circle cx="416" cy="124" r="5" fill="#e5f5ff" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values=".7;1;.7" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="416" cy="124" r="10" fill="none" stroke="#8ecaff" stroke-opacity=".16"/>
+
+    <text
+      x="416"
+      y="101"
+      text-anchor="middle"
+      fill="#b7cbe3"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="12"
+      letter-spacing="1.6"
+    >
+      ROBOTICS
+    </text>
+  </g>
+
+  <!-- AI -->
+  <g>
+    <circle cx="738" cy="121" r="5.5" fill="#ffffff" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values=".75;1;.75" dur="4.7s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="738" cy="121" r="11" fill="none" stroke="#a6d8ff" stroke-opacity=".18"/>
+
+    <text
+      x="738"
+      y="96"
+      text-anchor="middle"
+      fill="#c6daf0"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="12"
+      letter-spacing="1.6"
+    >
+      ARTIFICIAL INTELLIGENCE
+    </text>
+
+    <text
+      x="738"
+      y="79"
+      text-anchor="middle"
+      fill="#657d9d"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="9"
+    >
+      PyTorch · GNN · Recommendation
+    </text>
+  </g>
+
+  <!-- Computer Vision -->
+  <g>
+    <circle cx="935" cy="205" r="5" fill="#dff2ff" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values=".7;1;.7" dur="5.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="935" cy="205" r="10" fill="none" stroke="#8ecaff" stroke-opacity=".16"/>
+
+    <text
+      x="961"
+      y="196"
+      fill="#b7cbe3"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="12"
+      letter-spacing="1.6"
+    >
+      COMPUTER VISION
+    </text>
+
+    <text
+      x="961"
+      y="213"
+      fill="#657d9d"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="9"
+    >
+      YOLO · Object Detection
+    </text>
+  </g>
+
+  <!-- Software -->
+  <g>
+    <circle cx="826" cy="337" r="5" fill="#dff2ff" filter="url(#strongGlow)">
+      <animate attributeName="opacity" values=".75;1;.75" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="826" cy="337" r="10" fill="none" stroke="#8ecaff" stroke-opacity=".16"/>
+
+    <text
+      x="850"
+      y="356"
+      fill="#b7cbe3"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="12"
+      letter-spacing="1.6"
+    >
+      SOFTWARE
+    </text>
+
+    <text
+      x="850"
+      y="372"
+      fill="#657d9d"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="9"
+    >
+      React · Vue · Cloud
+    </text>
+  </g>
+
+  <!-- ================================ -->
+  <!-- CENTER IDENTITY                  -->
+  <!-- ================================ -->
+
+  <g>
+    <circle
+      cx="600"
+      cy="237"
+      r="7"
+      fill="#ffffff"
+      filter="url(#strongGlow)"
+    >
+      <animate
+        attributeName="r"
+        values="6.5;7.8;6.5"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+    <circle
+      cx="600"
+      cy="237"
+      r="17"
+      fill="none"
+      stroke="#8ecaff"
+      stroke-width="1"
+      stroke-opacity=".22"
+    >
+      <animate
+        attributeName="r"
+        values="14;22;14"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="opacity"
+        values=".35;.05;.35"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </g>
+
+  <!-- Name plate -->
+
+  <text
+    x="600"
+    y="276"
+    text-anchor="middle"
+    fill="#f2f7ff"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="31"
+    font-weight="600"
+    letter-spacing="7"
+  >
+    YOONSUNG KIM
+  </text>
+
+  <text
+    x="600"
+    y="301"
+    text-anchor="middle"
+    fill="#8299b8"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    letter-spacing="3"
+  >
+    ELECTRONIC ENGINEERING × ARTIFICIAL INTELLIGENCE
+  </text>
+
+  <!-- ================================ -->
+  <!-- SHOOTING STAR                    -->
+  <!-- ================================ -->
+
+  <g opacity="0">
+    <line
+      x1="-90"
+      y1="-40"
+      x2="0"
+      y2="0"
+      stroke="url(#shootingTrail)"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="0"
+      cy="0"
+      r="2"
+      fill="#ffffff"
+      filter="url(#starGlow)"
+    />
+
+    <animate
+      attributeName="opacity"
+      values="0;0;1;1;0;0"
+      keyTimes="0;.68;.70;.78;.81;1"
+      dur="11s"
+      repeatCount="indefinite"
+    />
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="
+        100 -20;
+        100 -20;
+        560 170;
+        860 290;
+        860 290
+      "
+      keyTimes="0;.68;.70;.80;1"
+      dur="11s"
+      repeatCount="indefinite"
+    />
+  </g>
+
+  <!-- ================================ -->
+  <!-- FOOTER MESSAGE                   -->
+  <!-- ================================ -->
+
+  <text
+    x="600"
+    y="428"
+    text-anchor="middle"
+    fill="#526985"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10"
+    letter-spacing="4"
+  >
+    CONNECTING HARDWARE · SOFTWARE · INTELLIGENCE
+  </text>
 
 </svg>
+```
