@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 800 320">
+  <style>
+    text { font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; font-size: 14px; dominant-baseline: middle; }
+    @keyframes cl0 { 0%,0% { opacity: 0 } 2%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl1 { 0%,4% { opacity: 0 } 6%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl2 { 0%,8% { opacity: 0 } 10%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl3 { 0%,12% { opacity: 0 } 14%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl4 { 0%,16% { opacity: 0 } 18%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl5 { 0%,20% { opacity: 0 } 22%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl6 { 0%,24% { opacity: 0 } 26%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl7 { 0%,28% { opacity: 0 } 30%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl8 { 0%,32% { opacity: 0 } 34%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes cl9 { 0%,36% { opacity: 0 } 38%,90% { opacity: 1 } 96%,100% { opacity: 0 } }
+    @keyframes blink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+    .cl0 { animation: cl0 12s ease-in-out infinite }
+    .cl1 { animation: cl1 12s ease-in-out infinite }
+    .cl2 { animation: cl2 12s ease-in-out infinite }
+    .cl3 { animation: cl3 12s ease-in-out infinite }
+    .cl4 { animation: cl4 12s ease-in-out infinite }
+    .cl5 { animation: cl5 12s ease-in-out infinite }
+    .cl6 { animation: cl6 12s ease-in-out infinite }
+    .cl7 { animation: cl7 12s ease-in-out infinite }
+    .cl8 { animation: cl8 12s ease-in-out infinite }
+    .cl9 { animation: cl9 12s ease-in-out infinite }
+  </style>
+  <rect width="100%" height="100%" fill="#1e1e1e" rx="14" ry="14"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="30" fill="#2c2c2c" rx="14" ry="14"/>
+  <rect x="0" y="16" width="800" height="14" fill="#2c2c2c"/>
+  <g opacity="0.55">
+    <circle cx="22" cy="15" r="5.5" fill="#ff5f57"/>
+    <circle cx="40" cy="15" r="5.5" fill="#febc2e"/>
+    <circle cx="58" cy="15" r="5.5" fill="#28c840"/>
+  </g>
+  <text x="400" y="16" fill="#6a737d" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle" dominant-baseline="middle">README.md</text>
+
+  <!-- Tab bar -->
+  <rect x="0" y="30" width="800" height="32" fill="#2c2c2c"/>
+  <rect x="0" y="30" width="156" height="32" fill="#252525"/>
+  <rect x="156" y="30" width="160" height="32" fill="#1e1e1e"/>
+  <rect x="156" y="30" width="160" height="2" fill="#569cd6"/>
+  <text x="172" y="46" fill="#d4d4d4" font-family="ui-monospace, monospace" font-size="11" dominant-baseline="middle">README.md</text>
+  <text x="300" y="46" fill="#6a737d" font-family="ui-monospace, monospace" font-size="11" dominant-baseline="middle">×</text>
+
+  <!-- Sidebar -->
+  <rect x="0" y="62" width="156" height="258" fill="#252525"/>
+  <text x="20" y="74" fill="#6a737d" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.2" dominant-baseline="middle">EXPLORER</text>
+  <text x="20" y="100" fill="#6a737d" font-size="12" dominant-baseline="middle">header.svg</text>
+  <rect x="0" y="108" width="156" height="22" fill="#d4d4d4" fill-opacity="0.06"/><text x="20" y="122" fill="#d4d4d4" font-size="12" dominant-baseline="middle">about.svg</text>
+  <text x="20" y="144" fill="#6a737d" font-size="12" dominant-baseline="middle">skills.svg</text>
+  <text x="20" y="166" fill="#6a737d" font-size="12" dominant-baseline="middle">gh-stats.svg</text>
+  <text x="20" y="188" fill="#6a737d" font-size="12" dominant-baseline="middle">footer.svg</text>
+  <line x1="156" y1="62" x2="156" y2="320" stroke="#353535" stroke-width="1"/>
+
+  <!-- Editor body -->
+  <g class="cl0">
+    <text x="184" y="93" fill="#6a737d" text-anchor="end" font-size="12">1</text>
+    <g transform="translate(194 93)"><text x="0" fill="#569cd6" font-weight="700">#</text><text x="16.8" fill="#d4d4d4" font-weight="700">Hi, I&apos;m Yoonsung Kim</text></g>
+  </g>
+  <g class="cl1">
+    <text x="184" y="115" fill="#6a737d" text-anchor="end" font-size="12">2</text>
+    
+  </g>
+  <g class="cl2">
+    <text x="184" y="137" fill="#6a737d" text-anchor="end" font-size="12">3</text>
+    <g transform="translate(194 137)"><text x="0" fill="#ce9178">&gt;</text><text x="16.8" fill="#d4d4d4">I build intelligent systems from embedded hardware to AI.</text></g>
+  </g>
+  <g class="cl3">
+    <text x="184" y="159" fill="#6a737d" text-anchor="end" font-size="12">4</text>
+    <g transform="translate(194 159)"><text x="0" fill="#ce9178">&gt;</text><text x="16.8" fill="#d4d4d4">My focus: robotics, computer vision, control, and applied AI.</text></g>
+  </g>
+  <g class="cl4">
+    <text x="184" y="181" fill="#6a737d" text-anchor="end" font-size="12">5</text>
+    <g transform="translate(194 181)"><text x="0" fill="#ce9178">&gt;</text><text x="16.8" fill="#d4d4d4">I enjoy connecting sensors, software, and models into products.</text></g>
+  </g>
+  <g class="cl5">
+    <text x="184" y="203" fill="#6a737d" text-anchor="end" font-size="12">6</text>
+    
+  </g>
+  <g class="cl6">
+    <text x="184" y="225" fill="#6a737d" text-anchor="end" font-size="12">7</text>
+    <g transform="translate(194 225)"><text x="0" fill="#569cd6" font-weight="600">##</text><text x="25.200000000000003" fill="#d4d4d4" font-weight="600">tags</text></g>
+  </g>
+  <g class="cl7">
+    <text x="184" y="247" fill="#6a737d" text-anchor="end" font-size="12">8</text>
+    <g transform="translate(194 247)"><text x="0" fill="#d4d4d4">-</text><text x="16.8" fill="#d4d4d4">Electronic Engineering + AI</text></g>
+  </g>
+  <g class="cl8">
+    <text x="184" y="269" fill="#6a737d" text-anchor="end" font-size="12">9</text>
+    <g transform="translate(194 269)"><text x="0" fill="#d4d4d4">-</text><text x="16.8" fill="#d4d4d4">Robotics · Embedded · Computer Vision</text></g>
+  </g>
+  <g class="cl9">
+    <text x="184" y="291" fill="#6a737d" text-anchor="end" font-size="12">10</text>
+    <g transform="translate(194 291)"><text x="0" fill="#d4d4d4">-</text><text x="16.8" fill="#d4d4d4">First-author Research · 5 Awards</text></g>
+  </g>
+
+  <!-- Blinking cursor at end of last non-blank line -->
+  <rect x="336.8" y="279" width="2" height="17" fill="#d4d4d4" style="animation: blink 1s steps(1) infinite"/>
+</svg>
