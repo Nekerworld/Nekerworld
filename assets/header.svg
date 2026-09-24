@@ -1,516 +1,91 @@
-<svg
-  width="1200"
-  height="480"
-  viewBox="0 0 1200 480"
-  xmlns="http://www.w3.org/2000/svg"
-  role="img"
-  aria-labelledby="title desc"
->
-  <title id="title">Yoonsung Kim Engineering Constellation</title>
-  <desc id="desc">
-    A constellation connecting Embedded Systems, Robotics,
-    Computer Vision, Artificial Intelligence and Software.
-  </desc>
-
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background -->
-    <radialGradient id="space" cx="50%" cy="42%" r="80%">
-      <stop offset="0%" stop-color="#101c36"/>
-      <stop offset="45%" stop-color="#080f21"/>
-      <stop offset="100%" stop-color="#030711"/>
-    </radialGradient>
-
-    <!-- Central glow -->
-    <radialGradient id="centerGlow">
-      <stop offset="0%" stop-color="#8ecaff" stop-opacity=".20"/>
-      <stop offset="45%" stop-color="#4a8fd8" stop-opacity=".07"/>
-      <stop offset="100%" stop-color="#030711" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Star glow -->
-    <filter id="starGlow" x="-300%" y="-300%" width="700%" height="700%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="strongGlow" x="-300%" y="-300%" width="700%" height="700%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Shooting star gradient -->
-    <linearGradient id="shootingTrail" x1="0" x2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#a8d8ff" stop-opacity=".9"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.52" stop-color="#0B1727"/>
+      <stop offset="1" stop-color="#08131E"/>
     </linearGradient>
+    <linearGradient id="signal" x1="130" y1="0" x2="1070" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4CC9F0"/>
+      <stop offset="0.55" stop-color="#7AA2F7"/>
+      <stop offset="1" stop-color="#9D7CD8"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#8BA4C7" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace; }
+      .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .dim { fill:#8B9BB4; }
+      .bright { fill:#EAF2FF; }
+      .line { stroke:url(#signal); stroke-width:2; stroke-linecap:round; }
+      .node { fill:#0B1727; stroke:#6EA8FE; stroke-width:1.5; }
+      .pulse { fill:#7DD3FC; filter:url(#glow); }
+      @keyframes fade { 0% {opacity:.35} 50% {opacity:1} 100% {opacity:.35} }
+      .blink { animation: fade 2.4s ease-in-out infinite; }
+    </style>
   </defs>
 
-  <!-- ================================ -->
-  <!-- BACKGROUND                       -->
-  <!-- ================================ -->
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="24" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1198" height="418" rx="23" stroke="#7AA2F7" stroke-opacity="0.20"/>
 
-  <rect width="1200" height="480" rx="22" fill="url(#space)"/>
-  <ellipse cx="600" cy="235" rx="430" ry="250" fill="url(#centerGlow)"/>
+  <text x="600" y="126" class="sans bright" text-anchor="middle" font-size="48" font-weight="700" letter-spacing="1">YOONSUNG KIM</text>
+  <text x="600" y="160" class="mono" fill="#9FB5D5" text-anchor="middle" font-size="17" letter-spacing="2">ELECTRONIC ENGINEERING × ARTIFICIAL INTELLIGENCE</text>
 
-  <!-- ================================ -->
-  <!-- DISTANT STAR FIELD               -->
-  <!-- ================================ -->
+  <!-- main signal bus -->
+  <line x1="170" y1="260" x2="1030" y2="260" class="line" opacity="0.58"/>
 
-  <g fill="#ffffff">
-
-    <circle cx="56" cy="54" r="1.1" opacity=".45"/>
-    <circle cx="112" cy="112" r=".8" opacity=".55"/>
-    <circle cx="170" cy="42" r="1.4" opacity=".65"/>
-    <circle cx="222" cy="91" r=".7" opacity=".4"/>
-    <circle cx="284" cy="35" r=".9" opacity=".5"/>
-    <circle cx="337" cy="123" r="1.2" opacity=".65"/>
-    <circle cx="395" cy="64" r=".7" opacity=".45"/>
-    <circle cx="458" cy="102" r="1.3" opacity=".55"/>
-    <circle cx="514" cy="46" r=".8" opacity=".45"/>
-    <circle cx="568" cy="91" r="1.1" opacity=".7"/>
-    <circle cx="630" cy="38" r=".7" opacity=".45"/>
-    <circle cx="684" cy="103" r="1.2" opacity=".55"/>
-    <circle cx="743" cy="56" r=".8" opacity=".5"/>
-    <circle cx="811" cy="91" r="1.1" opacity=".65"/>
-    <circle cx="872" cy="41" r=".7" opacity=".45"/>
-    <circle cx="932" cy="117" r="1.3" opacity=".55"/>
-    <circle cx="994" cy="55" r=".8" opacity=".45"/>
-    <circle cx="1053" cy="95" r="1.1" opacity=".65"/>
-    <circle cx="1122" cy="44" r=".8" opacity=".55"/>
-    <circle cx="1160" cy="139" r="1.3" opacity=".45"/>
-
-    <circle cx="73" cy="208" r=".8" opacity=".45"/>
-    <circle cx="143" cy="267" r="1.2" opacity=".6"/>
-    <circle cx="207" cy="191" r=".7" opacity=".4"/>
-    <circle cx="272" cy="245" r="1" opacity=".5"/>
-    <circle cx="916" cy="222" r=".8" opacity=".5"/>
-    <circle cx="1008" cy="271" r="1.1" opacity=".6"/>
-    <circle cx="1082" cy="194" r=".7" opacity=".45"/>
-    <circle cx="1150" cy="247" r="1.3" opacity=".55"/>
-
-    <circle cx="45" cy="367" r=".8" opacity=".4"/>
-    <circle cx="106" cy="419" r="1.2" opacity=".55"/>
-    <circle cx="184" cy="348" r=".7" opacity=".45"/>
-    <circle cx="252" cy="435" r="1.1" opacity=".55"/>
-    <circle cx="326" cy="379" r=".8" opacity=".4"/>
-    <circle cx="405" cy="437" r="1.2" opacity=".6"/>
-    <circle cx="484" cy="385" r=".7" opacity=".45"/>
-    <circle cx="718" cy="411" r=".8" opacity=".5"/>
-    <circle cx="792" cy="369" r="1.2" opacity=".55"/>
-    <circle cx="866" cy="436" r=".7" opacity=".4"/>
-    <circle cx="944" cy="378" r="1.1" opacity=".6"/>
-    <circle cx="1027" cy="428" r=".8" opacity=".45"/>
-    <circle cx="1104" cy="351" r="1.3" opacity=".55"/>
-    <circle cx="1163" cy="420" r=".7" opacity=".4"/>
-
-  </g>
-
-  <!-- Twinkling background stars -->
-
-  <g fill="#b9ddff">
-    <circle cx="151" cy="157" r="1.5">
-      <animate attributeName="opacity" values=".25;1;.25" dur="4.8s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="1040" cy="148" r="1.6">
-      <animate attributeName="opacity" values=".3;.9;.3" dur="6.2s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="344" cy="325" r="1.4">
-      <animate attributeName="opacity" values=".2;.9;.2" dur="5.4s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="875" cy="329" r="1.5">
-      <animate attributeName="opacity" values=".3;1;.3" dur="7s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- ================================ -->
-  <!-- CONSTELLATION LINES              -->
-  <!-- ================================ -->
-
-  <g
-    fill="none"
-    stroke="#76baff"
-    stroke-width="1.1"
-    stroke-opacity=".35"
-  >
-    <!-- Embedded -> Robotics -->
-    <line x1="250" y1="183" x2="416" y2="124"/>
-
-    <!-- Robotics -> AI -->
-    <line x1="416" y1="124" x2="738" y2="121"/>
-
-    <!-- AI -> Computer Vision -->
-    <line x1="738" y1="121" x2="935" y2="205"/>
-
-    <!-- Computer Vision -> Software -->
-    <line x1="935" y1="205" x2="826" y2="337"/>
-
-    <!-- Software -> Embedded -->
-    <line x1="826" y1="337" x2="250" y2="183"/>
-
-    <!-- Robotics -> center -->
-    <line x1="416" y1="124" x2="600" y2="237"/>
-
-    <!-- AI -> center -->
-    <line x1="738" y1="121" x2="600" y2="237"/>
-
-    <!-- CV -> center -->
-    <line x1="935" y1="205" x2="600" y2="237"/>
-
-    <!-- Embedded -> center -->
-    <line x1="250" y1="183" x2="600" y2="237"/>
-
-    <!-- Software -> center -->
-    <line x1="826" y1="337" x2="600" y2="237"/>
-  </g>
-
-  <!-- ================================ -->
-  <!-- PROJECT STARS                    -->
-  <!-- ================================ -->
-
-  <!-- Smart IV Pole -->
+  <!-- nodes -->
   <g>
-    <circle cx="455" cy="193" r="3.2" fill="#d9efff" filter="url(#starGlow)">
-      <animate attributeName="r" values="3.2;4;3.2" dur="4s" repeatCount="indefinite"/>
-    </circle>
-
-    <text
-      x="444"
-      y="214"
-      text-anchor="end"
-      fill="#8299b8"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="10"
-      letter-spacing=".7"
-    >
-      SMART IV POLE
-    </text>
+    <rect x="105" y="224" width="150" height="72" rx="12" class="node" zorder="2"/>
+    <text x="180" y="253" class="mono bright" text-anchor="middle" font-size="15" font-weight="700">SENSING</text>
+    <text x="180" y="278" class="mono dim" text-anchor="middle" font-size="12">Raw Data</text>
   </g>
-
-  <!-- Refactory -->
   <g>
-    <circle cx="731" cy="291" r="2.8" fill="#d9efff" filter="url(#starGlow)">
-      <animate attributeName="opacity" values=".65;1;.65" dur="5s" repeatCount="indefinite"/>
-    </circle>
-
-    <text
-      x="744"
-      y="308"
-      fill="#8299b8"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="10"
-      letter-spacing=".7"
-    >
-      REFACTORY
-    </text>
+    <rect x="315" y="224" width="150" height="72" rx="12" class="node"/>
+    <text x="390" y="253" class="mono bright" text-anchor="middle" font-size="15" font-weight="700">EMBEDDED</text>
+    <text x="390" y="278" class="mono dim" text-anchor="middle" font-size="12">STM32 · ESP32</text>
   </g>
-
-  <!-- Recommendation -->
   <g>
-    <circle cx="762" cy="164" r="2.8" fill="#d9efff" filter="url(#starGlow)">
-      <animate attributeName="opacity" values=".6;1;.6" dur="4.5s" repeatCount="indefinite"/>
-    </circle>
-
-    <text
-      x="778"
-      y="167"
-      fill="#8299b8"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="10"
-      letter-spacing=".7"
-    >
-      RECOMMENDATION
-    </text>
+    <rect x="525" y="224" width="150" height="72" rx="12" class="node"/>
+    <text x="600" y="253" class="mono bright" text-anchor="middle" font-size="15" font-weight="700">CONTROL</text>
+    <text x="600" y="278" class="mono dim" text-anchor="middle" font-size="12">MOTION · FUSION</text>
   </g>
-
-  <!-- ================================ -->
-  <!-- MAIN CONSTELLATION STARS         -->
-  <!-- ================================ -->
-
-  <!-- Embedded -->
   <g>
-    <circle cx="250" cy="183" r="5" fill="#dff2ff" filter="url(#strongGlow)">
-      <animate attributeName="opacity" values=".75;1;.75" dur="5s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="250" cy="183" r="11" fill="none" stroke="#8ecaff" stroke-opacity=".17"/>
-
-    <text
-      x="228"
-      y="164"
-      text-anchor="end"
-      fill="#b7cbe3"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="12"
-      letter-spacing="1.6"
-    >
-      EMBEDDED SYSTEMS
-    </text>
-
-    <text
-      x="228"
-      y="180"
-      text-anchor="end"
-      fill="#657d9d"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="9"
-    >
-      STM32 · ESP32 · C/C++
-    </text>
+    <rect x="735" y="224" width="150" height="72" rx="12" class="node"/>
+    <text x="810" y="253" class="mono bright" text-anchor="middle" font-size="15" font-weight="700">INTELLIGENCE</text>
+    <text x="810" y="278" class="mono dim" text-anchor="middle" font-size="12">CV · DL · ML</text>
   </g>
-
-  <!-- Robotics -->
   <g>
-    <circle cx="416" cy="124" r="5" fill="#e5f5ff" filter="url(#strongGlow)">
-      <animate attributeName="opacity" values=".7;1;.7" dur="6s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="416" cy="124" r="10" fill="none" stroke="#8ecaff" stroke-opacity=".16"/>
-
-    <text
-      x="416"
-      y="101"
-      text-anchor="middle"
-      fill="#b7cbe3"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="12"
-      letter-spacing="1.6"
-    >
-      ROBOTICS
-    </text>
+    <rect x="945" y="224" width="150" height="72" rx="12" class="node"/>
+    <text x="1020" y="253" class="mono bright" text-anchor="middle" font-size="15" font-weight="700">PRODUCT</text>
+    <text x="1020" y="278" class="mono dim" text-anchor="middle" font-size="12">WEB · CLOUD</text>
   </g>
 
-  <!-- AI -->
-  <g>
-    <circle cx="738" cy="121" r="5.5" fill="#ffffff" filter="url(#strongGlow)">
-      <animate attributeName="opacity" values=".75;1;.75" dur="4.7s" repeatCount="indefinite"/>
-    </circle>
+  <!-- animated signal dots -->
+  <circle r="5" cy="260" class="pulse">
+    <animate attributeName="cx" values="255;315;465;525;675;735;885;945" keyTimes="0;.12;.27;.39;.55;.67;.83;1" dur="5.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;1;1;1;1;0" dur="5.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="3" cy="260" fill="#A78BFA" opacity=".75">
+    <animate attributeName="cx" values="255;315;465;525;675;735;885;945" keyTimes="0;.12;.27;.39;.55;.67;.83;1" dur="5.4s" begin="-2.7s" repeatCount="indefinite"/>
+  </circle>
 
-    <circle cx="738" cy="121" r="11" fill="none" stroke="#a6d8ff" stroke-opacity=".18"/>
+  <!-- tiny engineering annotations -->
+  <text x="285" y="248" class="mono dim" text-anchor="middle" font-size="10">DATA</text>
+  <text x="495" y="248" class="mono dim" text-anchor="middle" font-size="10">STATE</text>
+  <text x="705" y="248" class="mono dim" text-anchor="middle" font-size="10">FEATURE</text>
+  <text x="915" y="248" class="mono dim" text-anchor="middle" font-size="10">OUTPUT</text>
 
-    <text
-      x="738"
-      y="96"
-      text-anchor="middle"
-      fill="#c6daf0"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="12"
-      letter-spacing="1.6"
-    >
-      ARTIFICIAL INTELLIGENCE
-    </text>
+  <text x="600" y="352" class="mono" fill="#B8C7DD" text-anchor="middle" font-size="16" letter-spacing="1.5">BUILDING INTELLIGENT SYSTEMS FROM CIRCUITS TO AI</text>
+  <circle cx="429" cy="347" r="3" fill="#7DD3FC" class="blink"/>
+  <circle cx="771" cy="347" r="3" fill="#A78BFA" class="blink"/>
 
-    <text
-      x="738"
-      y="79"
-      text-anchor="middle"
-      fill="#657d9d"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="9"
-    >
-      PyTorch · GNN · Recommendation
-    </text>
-  </g>
-
-  <!-- Computer Vision -->
-  <g>
-    <circle cx="935" cy="205" r="5" fill="#dff2ff" filter="url(#strongGlow)">
-      <animate attributeName="opacity" values=".7;1;.7" dur="5.8s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="935" cy="205" r="10" fill="none" stroke="#8ecaff" stroke-opacity=".16"/>
-
-    <text
-      x="961"
-      y="196"
-      fill="#b7cbe3"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="12"
-      letter-spacing="1.6"
-    >
-      COMPUTER VISION
-    </text>
-
-    <text
-      x="961"
-      y="213"
-      fill="#657d9d"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="9"
-    >
-      YOLO · Object Detection
-    </text>
-  </g>
-
-  <!-- Software -->
-  <g>
-    <circle cx="826" cy="337" r="5" fill="#dff2ff" filter="url(#strongGlow)">
-      <animate attributeName="opacity" values=".75;1;.75" dur="6.5s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="826" cy="337" r="10" fill="none" stroke="#8ecaff" stroke-opacity=".16"/>
-
-    <text
-      x="850"
-      y="356"
-      fill="#b7cbe3"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="12"
-      letter-spacing="1.6"
-    >
-      SOFTWARE
-    </text>
-
-    <text
-      x="850"
-      y="372"
-      fill="#657d9d"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="9"
-    >
-      React · Vue · Cloud
-    </text>
-  </g>
-
-  <!-- ================================ -->
-  <!-- CENTER IDENTITY                  -->
-  <!-- ================================ -->
-
-  <g>
-    <circle
-      cx="600"
-      cy="237"
-      r="7"
-      fill="#ffffff"
-      filter="url(#strongGlow)"
-    >
-      <animate
-        attributeName="r"
-        values="6.5;7.8;6.5"
-        dur="5s"
-        repeatCount="indefinite"
-      />
-    </circle>
-
-    <circle
-      cx="600"
-      cy="237"
-      r="17"
-      fill="none"
-      stroke="#8ecaff"
-      stroke-width="1"
-      stroke-opacity=".22"
-    >
-      <animate
-        attributeName="r"
-        values="14;22;14"
-        dur="5s"
-        repeatCount="indefinite"
-      />
-      <animate
-        attributeName="opacity"
-        values=".35;.05;.35"
-        dur="5s"
-        repeatCount="indefinite"
-      />
-    </circle>
-  </g>
-
-  <!-- Name plate -->
-
-  <text
-    x="600"
-    y="276"
-    text-anchor="middle"
-    fill="#f2f7ff"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="31"
-    font-weight="600"
-    letter-spacing="7"
-  >
-    YOONSUNG KIM
-  </text>
-
-  <text
-    x="600"
-    y="301"
-    text-anchor="middle"
-    fill="#8299b8"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="11"
-    letter-spacing="3"
-  >
-    ELECTRONIC ENGINEERING × ARTIFICIAL INTELLIGENCE
-  </text>
-
-  <!-- ================================ -->
-  <!-- SHOOTING STAR                    -->
-  <!-- ================================ -->
-
-  <g opacity="0">
-    <line
-      x1="-90"
-      y1="-40"
-      x2="0"
-      y2="0"
-      stroke="url(#shootingTrail)"
-      stroke-width="1.6"
-    />
-
-    <circle
-      cx="0"
-      cy="0"
-      r="2"
-      fill="#ffffff"
-      filter="url(#starGlow)"
-    />
-
-    <animate
-      attributeName="opacity"
-      values="0;0;1;1;0;0"
-      keyTimes="0;.68;.70;.78;.81;1"
-      dur="11s"
-      repeatCount="indefinite"
-    />
-
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="
-        100 -20;
-        100 -20;
-        560 170;
-        860 290;
-        860 290
-      "
-      keyTimes="0;.68;.70;.80;1"
-      dur="11s"
-      repeatCount="indefinite"
-    />
-  </g>
-
-  <!-- ================================ -->
-  <!-- FOOTER MESSAGE                   -->
-  <!-- ================================ -->
-
-  <text
-    x="600"
-    y="428"
-    text-anchor="middle"
-    fill="#526985"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="10"
-    letter-spacing="4"
-  >
-    CONNECTING HARDWARE · SOFTWARE · INTELLIGENCE
-  </text>
-
+  <text x="64" y="390" class="mono dim" font-size="11">HW → EMBEDDED → CONTROL → AI → SOFTWARE</text>
+  <text x="1136" y="390" class="mono dim" text-anchor="end" font-size="11">github.com/Nekerworld</text>
 </svg>
