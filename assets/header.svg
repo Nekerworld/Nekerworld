@@ -1,0 +1,607 @@
+```svg
+<svg
+  width="1200"
+  height="420"
+  viewBox="0 0 1200 420"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="50%" stop-color="#101820"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+
+    <!-- Main accent -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58A6FF"/>
+      <stop offset="50%" stop-color="#79C0FF"/>
+      <stop offset="100%" stop-color="#A5D6FF"/>
+    </linearGradient>
+
+    <!-- Grid -->
+    <pattern
+      id="grid"
+      width="30"
+      height="30"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M 30 0 L 0 0 0 30"
+        fill="none"
+        stroke="#30363D"
+        stroke-width="0.6"
+        opacity="0.35"
+      />
+    </pattern>
+
+    <!-- Glow -->
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ===================================================== -->
+  <!-- Background                                            -->
+  <!-- ===================================================== -->
+
+  <rect width="1200" height="420" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="18" fill="url(#grid)"/>
+
+  <!-- Border -->
+  <rect
+    x="1"
+    y="1"
+    width="1198"
+    height="418"
+    rx="17"
+    stroke="#30363D"
+    stroke-width="2"
+  />
+
+  <!-- Corner engineering marks -->
+  <g stroke="#58A6FF" stroke-width="1.5" opacity="0.65">
+    <path d="M25 55 V25 H55"/>
+    <path d="M1145 25 H1175 V55"/>
+    <path d="M25 365 V395 H55"/>
+    <path d="M1145 395 H1175 V365"/>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- Header                                                -->
+  <!-- ===================================================== -->
+
+  <text
+    x="600"
+    y="72"
+    text-anchor="middle"
+    fill="#F0F6FC"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="40"
+    font-weight="700"
+    letter-spacing="3"
+  >
+    YOONSUNG KIM
+  </text>
+
+  <text
+    x="600"
+    y="106"
+    text-anchor="middle"
+    fill="#8B949E"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="15"
+    font-weight="500"
+    letter-spacing="2"
+  >
+    ELECTRONIC ENGINEERING × ARTIFICIAL INTELLIGENCE
+  </text>
+
+  <!-- Small divider -->
+  <line
+    x1="480"
+    y1="125"
+    x2="720"
+    y2="125"
+    stroke="url(#accent)"
+    stroke-width="2"
+    opacity="0.8"
+  />
+
+  <!-- ===================================================== -->
+  <!-- Labels                                                -->
+  <!-- ===================================================== -->
+
+  <g
+    fill="#8B949E"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="11"
+    font-weight="600"
+    letter-spacing="1.5"
+    text-anchor="middle"
+  >
+    <text x="120" y="164">SENSING</text>
+    <text x="355" y="164">EMBEDDED</text>
+    <text x="590" y="164">CONTROL</text>
+    <text x="825" y="164">INTELLIGENCE</text>
+    <text x="1060" y="164">PRODUCT</text>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- Connection Lines                                      -->
+  <!-- ===================================================== -->
+
+  <g
+    stroke="#388BFD"
+    stroke-width="2"
+    opacity="0.7"
+    fill="none"
+  >
+    <path id="path1" d="M180 230 H295"/>
+    <path id="path2" d="M415 230 H530"/>
+    <path id="path3" d="M650 230 H765"/>
+    <path id="path4" d="M885 230 H1000"/>
+  </g>
+
+  <!-- Faint underlying bus -->
+  <path
+    d="M120 305 H1060"
+    stroke="#30363D"
+    stroke-width="1"
+    stroke-dasharray="5 7"
+  />
+
+  <!-- ===================================================== -->
+  <!-- Sensing Node                                          -->
+  <!-- ===================================================== -->
+
+  <g>
+    <rect
+      x="60"
+      y="185"
+      width="120"
+      height="90"
+      rx="10"
+      fill="#161B22"
+      stroke="#388BFD"
+      stroke-width="1.5"
+    />
+
+    <!-- sensor symbol -->
+    <circle cx="120" cy="216" r="10" stroke="#79C0FF" stroke-width="2"/>
+    <circle cx="120" cy="216" r="3" fill="#79C0FF"/>
+
+    <path
+      d="M105 216 Q120 198 135 216"
+      stroke="#58A6FF"
+      stroke-width="1.5"
+      fill="none"
+      opacity="0.7"
+    />
+
+    <text
+      x="120"
+      y="246"
+      text-anchor="middle"
+      fill="#F0F6FC"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="15"
+      font-weight="600"
+    >
+      Sensors
+    </text>
+
+    <text
+      x="120"
+      y="264"
+      text-anchor="middle"
+      fill="#8B949E"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="10"
+    >
+      Camera · UWB · IoT
+    </text>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- Embedded Node                                         -->
+  <!-- ===================================================== -->
+
+  <g>
+    <rect
+      x="295"
+      y="185"
+      width="120"
+      height="90"
+      rx="10"
+      fill="#161B22"
+      stroke="#388BFD"
+      stroke-width="1.5"
+    />
+
+    <!-- chip -->
+    <rect
+      x="337"
+      y="202"
+      width="36"
+      height="27"
+      rx="3"
+      stroke="#79C0FF"
+      stroke-width="1.7"
+    />
+
+    <g stroke="#79C0FF" stroke-width="1.3">
+      <line x1="332" y1="207" x2="337" y2="207"/>
+      <line x1="332" y1="214" x2="337" y2="214"/>
+      <line x1="332" y1="221" x2="337" y2="221"/>
+
+      <line x1="373" y1="207" x2="378" y2="207"/>
+      <line x1="373" y1="214" x2="378" y2="214"/>
+      <line x1="373" y1="221" x2="378" y2="221"/>
+    </g>
+
+    <text
+      x="355"
+      y="246"
+      text-anchor="middle"
+      fill="#F0F6FC"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="15"
+      font-weight="600"
+    >
+      Embedded
+    </text>
+
+    <text
+      x="355"
+      y="264"
+      text-anchor="middle"
+      fill="#8B949E"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="10"
+    >
+      STM32 · ESP32
+    </text>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- Control Node                                          -->
+  <!-- ===================================================== -->
+
+  <g>
+    <rect
+      x="530"
+      y="185"
+      width="120"
+      height="90"
+      rx="10"
+      fill="#161B22"
+      stroke="#388BFD"
+      stroke-width="1.5"
+    />
+
+    <!-- control curve -->
+    <path
+      d="M550 224 C565 198 582 239 600 211 C615 188 628 210 635 203"
+      stroke="#79C0FF"
+      stroke-width="2"
+      fill="none"
+    />
+
+    <circle cx="550" cy="224" r="2.5" fill="#79C0FF"/>
+    <circle cx="600" cy="211" r="2.5" fill="#79C0FF"/>
+    <circle cx="635" cy="203" r="2.5" fill="#79C0FF"/>
+
+    <text
+      x="590"
+      y="246"
+      text-anchor="middle"
+      fill="#F0F6FC"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="15"
+      font-weight="600"
+    >
+      Control
+    </text>
+
+    <text
+      x="590"
+      y="264"
+      text-anchor="middle"
+      fill="#8B949E"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="10"
+    >
+      Tracking · Robotics
+    </text>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- AI Node                                               -->
+  <!-- ===================================================== -->
+
+  <g>
+    <rect
+      x="765"
+      y="185"
+      width="120"
+      height="90"
+      rx="10"
+      fill="#161B22"
+      stroke="#58A6FF"
+      stroke-width="1.8"
+    />
+
+    <!-- neural nodes -->
+    <g fill="#79C0FF">
+      <circle cx="793" cy="207" r="3"/>
+      <circle cx="793" cy="223" r="3"/>
+
+      <circle cx="825" cy="200" r="3"/>
+      <circle cx="825" cy="215" r="3"/>
+      <circle cx="825" cy="230" r="3"/>
+
+      <circle cx="857" cy="207" r="3"/>
+      <circle cx="857" cy="223" r="3"/>
+    </g>
+
+    <g stroke="#58A6FF" stroke-width="0.8" opacity="0.7">
+      <line x1="796" y1="207" x2="822" y2="200"/>
+      <line x1="796" y1="207" x2="822" y2="215"/>
+      <line x1="796" y1="207" x2="822" y2="230"/>
+
+      <line x1="796" y1="223" x2="822" y2="200"/>
+      <line x1="796" y1="223" x2="822" y2="215"/>
+      <line x1="796" y1="223" x2="822" y2="230"/>
+
+      <line x1="828" y1="200" x2="854" y2="207"/>
+      <line x1="828" y1="215" x2="854" y2="207"/>
+      <line x1="828" y1="230" x2="854" y2="223"/>
+    </g>
+
+    <text
+      x="825"
+      y="246"
+      text-anchor="middle"
+      fill="#F0F6FC"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="15"
+      font-weight="600"
+    >
+      Intelligence
+    </text>
+
+    <text
+      x="825"
+      y="264"
+      text-anchor="middle"
+      fill="#8B949E"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="10"
+    >
+      AI · CV · GNN
+    </text>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- Product Node                                          -->
+  <!-- ===================================================== -->
+
+  <g>
+    <rect
+      x="1000"
+      y="185"
+      width="120"
+      height="90"
+      rx="10"
+      fill="#161B22"
+      stroke="#58A6FF"
+      stroke-width="1.8"
+    />
+
+    <!-- product -->
+    <rect
+      x="1038"
+      y="201"
+      width="44"
+      height="30"
+      rx="4"
+      stroke="#79C0FF"
+      stroke-width="1.7"
+    />
+
+    <line
+      x1="1047"
+      y1="237"
+      x2="1073"
+      y2="237"
+      stroke="#79C0FF"
+      stroke-width="1.7"
+    />
+
+    <line
+      x1="1060"
+      y1="231"
+      x2="1060"
+      y2="237"
+      stroke="#79C0FF"
+      stroke-width="1.7"
+    />
+
+    <text
+      x="1060"
+      y="255"
+      text-anchor="middle"
+      fill="#F0F6FC"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="15"
+      font-weight="600"
+    >
+      Product
+    </text>
+
+    <text
+      x="1060"
+      y="271"
+      text-anchor="middle"
+      fill="#8B949E"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="10"
+    >
+      Cloud · Service
+    </text>
+  </g>
+
+  <!-- ===================================================== -->
+  <!-- Animated Signals                                      -->
+  <!-- ===================================================== -->
+
+  <circle r="5" fill="#A5D6FF" filter="url(#glow)">
+    <animateMotion
+      dur="2.8s"
+      repeatCount="indefinite"
+      path="M180 230 H295"
+    />
+    <animate
+      attributeName="opacity"
+      values="0;1;1;0"
+      dur="2.8s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle r="5" fill="#A5D6FF" filter="url(#glow)">
+    <animateMotion
+      dur="2.8s"
+      begin="0.55s"
+      repeatCount="indefinite"
+      path="M415 230 H530"
+    />
+    <animate
+      attributeName="opacity"
+      values="0;1;1;0"
+      dur="2.8s"
+      begin="0.55s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle r="5" fill="#A5D6FF" filter="url(#glow)">
+    <animateMotion
+      dur="2.8s"
+      begin="1.1s"
+      repeatCount="indefinite"
+      path="M650 230 H765"
+    />
+    <animate
+      attributeName="opacity"
+      values="0;1;1;0"
+      dur="2.8s"
+      begin="1.1s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle r="5" fill="#A5D6FF" filter="url(#glow)">
+    <animateMotion
+      dur="2.8s"
+      begin="1.65s"
+      repeatCount="indefinite"
+      path="M885 230 H1000"
+    />
+    <animate
+      attributeName="opacity"
+      values="0;1;1;0"
+      dur="2.8s"
+      begin="1.65s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <!-- Node pulse -->
+  <circle
+    cx="825"
+    cy="230"
+    r="65"
+    fill="#58A6FF"
+    opacity="0"
+    filter="url(#softGlow)"
+  >
+    <animate
+      attributeName="opacity"
+      values="0;0.04;0"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <!-- ===================================================== -->
+  <!-- Footer / Philosophy                                   -->
+  <!-- ===================================================== -->
+
+  <text
+    x="600"
+    y="330"
+    text-anchor="middle"
+    fill="#F0F6FC"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="16"
+    font-weight="600"
+    letter-spacing="2"
+  >
+    FROM CIRCUITS TO INTELLIGENCE
+  </text>
+
+  <text
+    x="600"
+    y="358"
+    text-anchor="middle"
+    fill="#8B949E"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="12"
+    letter-spacing="1"
+  >
+    Building complete intelligent systems, not just individual features.
+  </text>
+
+  <!-- Bottom signal line -->
+  <line
+    x1="390"
+    y1="382"
+    x2="810"
+    y2="382"
+    stroke="#30363D"
+    stroke-width="1"
+  />
+
+  <circle cy="382" r="3" fill="#58A6FF" filter="url(#glow)">
+    <animate
+      attributeName="cx"
+      values="390;810"
+      dur="5s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="opacity"
+      values="0;1;1;0"
+      dur="5s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+</svg>
+```
