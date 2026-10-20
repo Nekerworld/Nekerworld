@@ -30,7 +30,7 @@
 <table>
 <tr>
 <td width="50%" align="center">
-<h3>4회 수상</h3>
+<h3>5회 수상</h3>
 AI · Embedded · Robotics<br>
 프로젝트 및 경진대회
 </td>
@@ -131,7 +131,7 @@ UWB를 이용해 환자와의 거리를 측정하고, 양측 비전 센서를 �
 
 **연구**<br>
 *A Hybrid Retrieve–then–Rank Framework Integrating Matrix Factorization and Graph Neural Networks*
-IEEE Access · **제1저자** · Revision 대기 중
+IEEE Access · **제1저자** · Revision 진행 중
 
 ---
 
@@ -190,7 +190,7 @@ Techeer Winter BootCamp **공동 3위**
 </table>
 
 <p align="center">
-  <img src="./assets/architecture-paper.svg" width="100%" alt="Refactory 시스템 구성" />
+  <img src="./assets/architecture-paper.svg" width="100%" alt="하이브리드 추천 시스템 구성" />
 </p>
 
 | 항목        | 내용                                                                                               |
