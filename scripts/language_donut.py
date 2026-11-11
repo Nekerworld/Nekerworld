@@ -8,7 +8,7 @@ import urllib.error
 import urllib.parse
 
 OUTPUT = Path("assets/languages-donut.svg")
-MAX_LANGUAGES = 50
+MAX_LANGUAGES = 20
 FALLBACK = ["#58a6ff", "#a371f7", "#3fb950", "#f0883e", "#db61a2", "#79c0ff"]
 
 def render(totals, count):
