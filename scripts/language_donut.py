@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a responsive SVG donut with up to 50 language labels."""
+"""Generate a responsive SVG donut with up to 10 language labels."""
 import math
 from collections import Counter
 from pathlib import Path
@@ -8,7 +8,7 @@ import urllib.error
 import urllib.parse
 
 OUTPUT = Path("assets/languages-donut.svg")
-MAX_LANGUAGES = 20
+MAX_LANGUAGES = 10
 FALLBACK = ["#58a6ff", "#a371f7", "#3fb950", "#f0883e", "#db61a2", "#79c0ff"]
 
 def render(totals, count):
@@ -42,7 +42,7 @@ def render(totals, count):
                       f'<text x="{x+21}" y="{y}" fill="#c9d1d9" font-size="14">{esc(lang)}</text>'
                       f'<text x="{x+403}" y="{y}" fill="#8b949e" font-size="13" text-anchor="end">{fraction*100:.2f}%</text>')
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="900" height="{height}" viewBox="0 0 900 {height}" role="img" aria-label="Programming languages donut chart across personal and organization repositories">
-<title>Languages Across My Repositories</title>
+<title>Top Languages</title>
 <rect width="900" height="{height}" rx="12" fill="#0d1117"/>
 <text x="30" y="38" fill="#e6edf3" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Languages Across My Repositories</text>
 <text x="870" y="38" text-anchor="end" fill="#8b949e" font-family="Arial, sans-serif" font-size="13">{count} repositories</text>
