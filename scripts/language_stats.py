@@ -72,6 +72,15 @@ def repo_list():
     # No fork or archived exclusions: 'all' means all accessible selected repos.
     return sorted(repos.values(), key=lambda r: r["full_name"].lower())
 
+def normalize_languages(languages):
+    """Exclude G-code/Wolfram and attribute Jupyter Notebook bytes to Python."""
+    result = Counter()
+    for lang, size in languages.items():
+        if lang.lower() in ("g-code", "wolfram language"):
+            continue
+        result["Python" if lang == "Jupyter Notebook" else lang] += size
+    return result
+
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;")
             .replace(">", "&gt;").replace('"', "&quot;"))
@@ -126,7 +135,7 @@ def main():
         except urllib.error.HTTPError as exc:
             raise RuntimeError(f"Cannot read language data for {full}: HTTP {exc.code}") from exc
         if langs:
-            totals.update({lang: size for lang, size in langs.items() if lang.lower() != "g-code"})
+            totals.update(normalize_languages(langs))
             completed += 1
     render(totals, completed)
     print(f"Generated {OUTPUT}: {completed} repositories, {len(totals)} languages")
