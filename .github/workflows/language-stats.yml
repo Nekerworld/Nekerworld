@@ -37,7 +37,7 @@ jobs:
           svg = Path("assets/languages-donut.svg")
           version = hashlib.sha256(svg.read_bytes()).hexdigest()[:12]
           content = readme.read_text(encoding="utf-8")
-          pattern = r'(https://raw\\.githubusercontent\\.com/Nekerworld/Nekerworld/gh-pages/assets/languages-donut\\.svg)(?:\\?v=[A-Za-z0-9._-]+)?'
+          pattern = r'(https://raw\.githubusercontent\.com/Nekerworld/Nekerworld/gh-pages/assets/languages-donut\.svg)(?:\?v=[A-Za-z0-9._-]+)?'
           updated, count = re.subn(pattern, lambda m: m.group(1) + "?v=" + version, content)
           if count != 1:
               raise RuntimeError(f"Expected one README donut image URL, found {count}")
