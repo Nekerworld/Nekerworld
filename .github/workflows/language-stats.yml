@@ -26,11 +26,29 @@ jobs:
         run: |
           python3 scripts/language_stats.py
           python3 scripts/language_donut.py
+      - name: Refresh README image URL when SVG changes
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import re
+          from pathlib import Path
+
+          readme = Path("README.md")
+          svg = Path("assets/languages-donut.svg")
+          version = hashlib.sha256(svg.read_bytes()).hexdigest()[:12]
+          content = readme.read_text(encoding="utf-8")
+          pattern = r'(https://raw\\.githubusercontent\\.com/Nekerworld/Nekerworld/gh-pages/assets/languages-donut\\.svg)(?:\\?v=[A-Za-z0-9._-]+)?'
+          updated, count = re.subn(pattern, lambda m: m.group(1) + "?v=" + version, content)
+          if count != 1:
+              raise RuntimeError(f"Expected one README donut image URL, found {count}")
+          if updated != content:
+              readme.write_text(updated, encoding="utf-8")
+          PY
       - name: Commit updated SVG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/languages.svg assets/languages-donut.svg
+          git add assets/languages.svg assets/languages-donut.svg README.md
           if ! git diff --cached --quiet; then
             git commit -m "Update combined repository language statistics"
             git push
