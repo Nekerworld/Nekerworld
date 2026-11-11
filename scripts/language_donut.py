@@ -50,13 +50,12 @@ def render(totals, count):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="760" height="{height}" viewBox="0 0 760 {height}" role="img" aria-label="Programming languages donut chart across personal and organization repositories">
 <title>Top Languages</title>
 <rect width="760" height="{height}" rx="12" fill="#0d1117"/>
-<text x="30" y="38" fill="#e6edf3" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Languages Across My Repositories</text>
+<text x="30" y="38" fill="#e6edf3" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Top Languages</text>
 <text x="730" y="62" text-anchor="end" fill="#8b949e" font-family="Arial, sans-serif" font-size="13">{count} repositories</text>
 <g>{''.join(shapes)}</g>
 <text x="{cx}" y="{cy-5}" text-anchor="middle" fill="#e6edf3" font-size="26" font-weight="bold" font-family="Arial, sans-serif">{n}</text>
 <text x="{cx}" y="{cy+18}" text-anchor="middle" fill="#8b949e" font-size="13" font-family="Arial, sans-serif">languages</text>
 <g font-family="Arial, sans-serif">{''.join(labels)}</g>
-<text x="30" y="{height-17}" fill="#8b949e" font-size="12" font-family="Arial, sans-serif">GitHub Linguist bytes · entire repositories including team contributions</text>
 </svg>'''
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(svg, encoding="utf-8")
