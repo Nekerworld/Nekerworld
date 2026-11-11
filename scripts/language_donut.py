@@ -3,7 +3,7 @@
 import math
 from collections import Counter
 from pathlib import Path
-from language_stats import repo_list, request, esc, PALETTE
+from language_stats import repo_list, request, esc, PALETTE, normalize_languages
 import urllib.error
 import urllib.parse
 
@@ -15,15 +15,20 @@ def render(totals, count):
     entries = sorted(totals.items(), key=lambda x: (-x[1], x[0]))
     if not entries:
         raise RuntimeError("No language statistics available")
-    selected = entries[:MAX_LANGUAGES]
-    omitted = sum(v for _, v in entries[MAX_LANGUAGES:])
-    if omitted:
-        # Keep at most 50 legend entries, including Other.
-        selected = entries[:MAX_LANGUAGES - 1] + [("Other", sum(v for _, v in entries[MAX_LANGUAGES - 1:]))]
     total = sum(totals.values())
-    n = len(entries)  # Actual number of detected languages, not legend entries.
+    n = len(entries)  # All detected language categories after normalization.
+    # Only categories below 0.01% are combined into Other.
+    visible = [(lang, value) for lang, value in entries if value / total >= 0.0001]
+    other_bytes = sum(value for lang, value in entries if value / total < 0.0001)
+    if len(visible) > MAX_LANGUAGES:
+        other_bytes += sum(value for _, value in visible[MAX_LANGUAGES - 1:])
+        visible = visible[:MAX_LANGUAGES - 1]
+    elif other_bytes and len(visible) == MAX_LANGUAGES:
+        other_bytes += visible[-1][1]
+        visible = visible[:-1]
+    selected = visible + ([("Other", other_bytes)] if other_bytes else [])
     columns = 2
-    rows = math.ceil(n / columns)
+    rows = math.ceil(len(selected) / columns)
     legend_bottom = 352 + (rows - 1) * 30
     height = max(450, legend_bottom + 85)  # Separate footer from the last legend row.
     cx, cy, radius, stroke = 380, 174, 103, 42
@@ -66,7 +71,7 @@ def main():
         except urllib.error.HTTPError as exc:
             raise RuntimeError(f"Cannot read language data for {name}: HTTP {exc.code}") from exc
         if data:
-            totals.update({lang: size for lang, size in data.items() if lang.lower() != "g-code"})
+            totals.update(normalize_languages(data))
             completed += 1
     render(totals, completed)
     print(f"Generated {OUTPUT} for {completed} repositories")
