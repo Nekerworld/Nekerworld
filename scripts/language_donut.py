@@ -26,7 +26,7 @@ def render(totals, count):
     elif other_bytes and len(visible) == MAX_LANGUAGES:
         other_bytes += visible[-1][1]
         visible = visible[:-1]
-    selected = sorted(visible + ([("Other", other_bytes)] if other_bytes else []), key=lambda x: (-x[1], x[0]))
+    selected = sorted(visible, key=lambda x: (-x[1], x[0])) + ([("Other", other_bytes)] if other_bytes else [])
     columns = 2
     rows = math.ceil(len(selected) / columns)
     legend_bottom = 352 + (rows - 1) * 30
