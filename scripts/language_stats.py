@@ -73,10 +73,10 @@ def repo_list():
     return sorted(repos.values(), key=lambda r: r["full_name"].lower())
 
 def normalize_languages(languages):
-    """Exclude G-code, Wolfram and CMake; merge Jupyter Notebook into Python."""
+    """Exclude G-code, Wolfram, CMake and Roff; merge Jupyter Notebook into Python."""
     result = Counter()
     for lang, size in languages.items():
-        if lang.lower() in ("g-code", "wolfram language", "cmake"):
+        if lang.lower() in ("g-code", "wolfram language", "cmake", "roff"):
             continue
         result["Python" if lang == "Jupyter Notebook" else lang] += size
     return result
