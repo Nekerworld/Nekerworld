@@ -41,8 +41,11 @@ def paged(path):
 def repo_list():
     repos = {}
     # Authenticated membership includes personal, organization and collaborator repositories.
-    for r in paged("/user/repos?affiliation=owner,collaborator,organization_member"):
-        repos[r["full_name"]] = r
+    try:
+        for r in paged("/user/repos?affiliation=owner,collaborator,organization_member"):
+            repos[r["full_name"]] = r
+    except urllib.error.HTTPError as exc:
+        print(f"Authenticated repository listing unavailable (HTTP {exc.code}); using public repositories")
     # Public organization repositories are discoverable without organization token access.
     orgs = ["2024-Winter-BootCamp-TeamD", "Find-For-You", "KM-coporation", "Wake-Up-It-s-a-Hospital"]
     for org in orgs:
