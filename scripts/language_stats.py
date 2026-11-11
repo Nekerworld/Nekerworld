@@ -39,24 +39,38 @@ def paged(path):
         page += 1
 
 def repo_list():
+    """Only explicitly selected personal and organization repositories.
+
+    Private repositories require LANGUAGE_STATS_TOKEN with appropriate access.
+    """
+    if not TOKEN:
+        raise RuntimeError("LANGUAGE_STATS_TOKEN is required to include private repositories")
+    account = request("/user")
+    if account.get("login", "").lower() != USER.lower():
+        raise RuntimeError(f"Token belongs to {account.get('login')}, expected {USER}")
+
     repos = {}
-    # Authenticated membership includes personal, organization and collaborator repositories.
-    try:
-        for r in paged("/user/repos?affiliation=owner,collaborator,organization_member"):
+    # Include all owned personal repositories, public and private.
+    for r in paged("/user/repos?affiliation=owner&visibility=all"):
+        if r["owner"]["login"].lower() == USER.lower():
             repos[r["full_name"]] = r
-    except urllib.error.HTTPError as exc:
-        print(f"Authenticated repository listing unavailable (HTTP {exc.code}); using public repositories")
-    # Public organization repositories are discoverable without organization token access.
-    orgs = ["2024-Winter-BootCamp-TeamD", "Find-For-You", "KM-coporation", "Wake-Up-It-s-a-Hospital"]
-    for org in orgs:
-        for r in paged("/orgs/" + urllib.parse.quote(org) + "/repos?type=public"):
-            repos.setdefault(r["full_name"], r)
-    # Include public personal repos if token permissions limit the /user/repos list.
-    for r in paged("/users/" + urllib.parse.quote(USER) + "/repos?type=owner"):
-        repos.setdefault(r["full_name"], r)
-    return [r for r in repos.values() if r.get("name") not in EXCLUDED and
-            not (SKIP_FORKS and r.get("fork")) and
-            not (SKIP_ARCHIVED and r.get("archived")) and r.get("size", 0) > 0]
+
+    # Include every accessible repository in these two organizations.
+    for org in ("Find-For-You", "KM-coporation"):
+        for r in paged("/orgs/" + urllib.parse.quote(org) + "/repos?type=all"):
+            repos[r["full_name"]] = r
+
+    # Only these specific repositories from the other organizations.
+    selected = (
+        "Wake-Up-It-s-a-Hospital/Smart-Feature",
+        "Wake-Up-It-s-a-Hospital/Distance-Control",
+        "2024-Winter-BootCamp-TeamD/review-Frontend",
+    )
+    for name in selected:
+        repos[name] = request("/repos/" + "/".join(map(urllib.parse.quote, name.split("/"))))
+
+    # No fork or archived exclusions: 'all' means all accessible selected repos.
+    return sorted(repos.values(), key=lambda r: r["full_name"].lower())
 
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;")
@@ -110,8 +124,7 @@ def main():
         try:
             langs = request("/repos/" + "/".join(map(urllib.parse.quote, full.split("/"))) + "/languages")
         except urllib.error.HTTPError as exc:
-            print(f"Skipping {full}: HTTP {exc.code}")
-            continue
+            raise RuntimeError(f"Cannot read language data for {full}: HTTP {exc.code}") from exc
         if langs:
             totals.update(langs)
             completed += 1
