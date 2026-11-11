@@ -18,13 +18,14 @@ def render(totals, count):
     selected = entries[:MAX_LANGUAGES]
     omitted = sum(v for _, v in entries[MAX_LANGUAGES:])
     if omitted:
-        # Keep 50 legend entries at most, including Other.
+        # Keep at most 50 legend entries, including Other.
         selected = entries[:MAX_LANGUAGES - 1] + [("Other", sum(v for _, v in entries[MAX_LANGUAGES - 1:]))]
     total = sum(totals.values())
-    n = len(selected)
+    n = len(entries)  # Actual number of detected languages, not legend entries.
     columns = 2
     rows = math.ceil(n / columns)
-    height = max(420, 360 + rows * 30)
+    legend_bottom = 352 + (rows - 1) * 30
+    height = max(450, legend_bottom + 85)  # Separate footer from the last legend row.
     cx, cy, radius, stroke = 380, 174, 103, 42
     circumference = 2 * math.pi * radius
     shapes = [f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" stroke="#30363d" stroke-width="{stroke}"/>']
