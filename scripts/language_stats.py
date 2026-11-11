@@ -126,7 +126,7 @@ def main():
         except urllib.error.HTTPError as exc:
             raise RuntimeError(f"Cannot read language data for {full}: HTTP {exc.code}") from exc
         if langs:
-            totals.update(langs)
+            totals.update({lang: size for lang, size in langs.items() if lang.lower() != "g-code"})
             completed += 1
     render(totals, completed)
     print(f"Generated {OUTPUT}: {completed} repositories, {len(totals)} languages")
