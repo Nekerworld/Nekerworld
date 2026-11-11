@@ -64,8 +64,7 @@ def main():
         try:
             data = request("/repos/" + "/".join(map(urllib.parse.quote, name.split("/"))) + "/languages")
         except urllib.error.HTTPError as exc:
-            print(f"Skipping {name}: HTTP {exc.code}")
-            continue
+            raise RuntimeError(f"Cannot read language data for {name}: HTTP {exc.code}") from exc
         if data:
             totals.update(data)
             completed += 1
