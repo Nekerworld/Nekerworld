@@ -216,6 +216,16 @@ Techeer Winter BootCamp **공동 3위**
 
 ---
 
+## ◇ 언어 사용 비중
+
+개인 및 참여 Organization 레포지토리의 언어별 코드 용량을 합산한 통계입니다. 팀 프로젝트는 전체 레포지토리 기준이며 개인 기여량을 뜻하지 않습니다.
+
+<p align="center">
+  <img src="./assets/languages.svg" width="100%" alt="Combined programming languages across personal and organization repositories" />
+</p>
+
+---
+
 # ◇ 기술 스택
 
 | 분야                         | 기반 기술                     | 활용 기술                                                               |
