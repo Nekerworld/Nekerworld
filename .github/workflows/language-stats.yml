@@ -22,7 +22,7 @@ jobs:
       - name: Build combined language graph
         env:
           GITHUB_PROFILE_USER: Nekerworld
-          GH_STATS_TOKEN: ${{ secrets.LANGUAGE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_STATS_TOKEN: ${{ secrets.LANGUAGE_STATS_TOKEN }}
         run: |
           python3 scripts/language_stats.py
           python3 scripts/language_donut.py
