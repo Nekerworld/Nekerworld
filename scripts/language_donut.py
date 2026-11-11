@@ -26,7 +26,7 @@ def render(totals, count):
     elif other_bytes and len(visible) == MAX_LANGUAGES:
         other_bytes += visible[-1][1]
         visible = visible[:-1]
-    selected = visible + ([("Other", other_bytes)] if other_bytes else [])
+    selected = sorted(visible + ([("Other", other_bytes)] if other_bytes else []), key=lambda x: (-x[1], x[0]))
     columns = 2
     rows = math.ceil(len(selected) / columns)
     legend_bottom = 352 + (rows - 1) * 30
@@ -42,7 +42,7 @@ def render(totals, count):
         length = fraction * circumference
         shapes.append(f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" stroke="{color}" stroke-width="{stroke}" stroke-dasharray="{length:.5f} {circumference:.5f}" stroke-dashoffset="{-offset:.5f}" transform="rotate(-90 {cx} {cy})"/>')
         offset += length
-        col, row = i % 2, i // 2
+        col, row = i // rows, i % rows
         x, y = 30 + col * 380, 352 + row * 30
         labels.append(f'<circle cx="{x+6}" cy="{y-5}" r="6" fill="{color}"/>'
                       f'<text x="{x+21}" y="{y}" fill="#c9d1d9" font-size="15">{esc(lang)}</text>'
