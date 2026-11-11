@@ -233,18 +233,6 @@ Techeer Winter BootCamp **공동 3위**
 | **Electronic Engineering** | `Verilog`                 | `Quartus` `PSpice` `Digital Logic` `Circuit Design`                 |
 | **Software · Web**         | `JavaScript` `TypeScript` | `React` `Vue` `Vite` `Django` `MySQL` `Firebase`                    |
 
-**Embedded · Control**
-MCU 기반 센서 데이터 처리와 모터 제어, 여러 센서를 결합한 이동 시스템을 구현한 경험이 있습니다.
-
-**AI · Computer Vision**
-Computer Vision과 Recommendation System을 중심으로 Deep Learning 모델의 학습, 실험 및 시스템 적용 경험이 있습니다.
-
-**Electronic Engineering**
-전자공학 전공 과정에서 회로, 디지털 논리, FPGA 및 MCU 기반 시스템을 학습했습니다.
-
-**Software · Web**
-AI와 Embedded System에서 생성되는 결과를 실제 사용자가 이용할 수 있는 서비스와 인터페이스로 연결하기 위한 Software Development 경험이 있습니다.
-
 ---
 
 # ◇ 학력 및 교육
