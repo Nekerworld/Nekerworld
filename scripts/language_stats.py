@@ -43,6 +43,11 @@ def repo_list():
     # Authenticated membership includes personal, organization and collaborator repositories.
     for r in paged("/user/repos?affiliation=owner,collaborator,organization_member"):
         repos[r["full_name"]] = r
+    # Public organization repositories are discoverable without organization token access.
+    orgs = ["2024-Winter-BootCamp-TeamD", "Find-For-You", "KM-coporation", "Wake-Up-It-s-a-Hospital"]
+    for org in orgs:
+        for r in paged("/orgs/" + urllib.parse.quote(org) + "/repos?type=public"):
+            repos.setdefault(r["full_name"], r)
     # Include public personal repos if token permissions limit the /user/repos list.
     for r in paged("/users/" + urllib.parse.quote(USER) + "/repos?type=owner"):
         repos.setdefault(r["full_name"], r)
