@@ -34,7 +34,7 @@ EXCLUDED_SUFFIXES = (".min.js",".min.css",".map",".generated.js",".generated.ts"
                      ".g.dart",".freezed.dart",".pb.dart",".gr.dart",".designer.cs")
 # Repo-specific source boundaries; paths are relative to the repository root.
 EXCLUDED_PATHS = {
-    "Nekerworld/SSAFY": ("AI_core_pjt/crawling/data/**","AI_core_pjt/frontend/public/assets/**",
+    "Nekerworld/SSAFY": ("게이미피케이션/**","AI_core_pjt/crawling/data/**","AI_core_pjt/frontend/public/assets/**",
         "lecture pdf/**","**/data/MNIST/**","**/data/mnist/**","**/image_stats_results/**",
         "**/ensemble/**/merge/**","**/best_adapter/**","**/model/*.safetensors"),
     "Nekerworld/Solar-Atlas": ("crawling/data/**","backend/rag_runtime/wiki_cache/**",
