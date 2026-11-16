@@ -144,17 +144,17 @@
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
-      "included_bytes": 18287,
+      "included_bytes": 19693,
       "excluded_files": 80,
-      "excluded_bytes": 2706818,
+      "excluded_bytes": 2706801,
       "reasons": {
         "dependency/build/cache": 1988,
         "non-source/unsupported": 28380,
-        "repository exclusion": 2676450
+        "repository exclusion": 2676433
       },
       "languages": {
         "HTML": 844,
-        "Python": 17443
+        "Python": 18849
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -253,19 +253,20 @@
     },
     "Nekerworld/SSAFY": {
       "included_files": 234,
-      "included_bytes": 1358439,
+      "included_bytes": 1190305,
       "excluded_files": 14522,
-      "excluded_bytes": 3482224443,
+      "excluded_bytes": 3482392577,
       "reasons": {
         "non-source/unsupported": 79738831,
         "dependency/build/cache": 645332574,
+        "notebook outputs/metadata": 168134,
         "repository exclusion": 2756784123,
         "duplicate blob": 274174,
         "dependency manifest": 57535,
         "generated/minified": 37206
       },
       "languages": {
-        "Python": 738646,
+        "Python": 570512,
         "HTML": 342353,
         "Vue": 44156,
         "JavaScript": 181396,
@@ -281,16 +282,17 @@
     },
     "Nekerworld/SSAFY_AI_Challenge": {
       "included_files": 8,
-      "included_bytes": 922841,
+      "included_bytes": 310641,
       "excluded_files": 44,
-      "excluded_bytes": 135481030,
+      "excluded_bytes": 136093230,
       "reasons": {
+        "notebook outputs/metadata": 612200,
         "non-source/unsupported": 103655530,
         "repository exclusion": 31752359,
         "duplicate blob": 73141
       },
       "languages": {
-        "Python": 922841
+        "Python": 310641
       }
     },
     "Nekerworld/SSAFY_Study": {
@@ -319,17 +321,18 @@
     },
     "Nekerworld/TUK": {
       "included_files": 45,
-      "included_bytes": 3824790,
+      "included_bytes": 380593,
       "excluded_files": 3010,
-      "excluded_bytes": 2276175795,
+      "excluded_bytes": 2279619992,
       "reasons": {
         "non-source/unsupported": 1590636518,
         "repository exclusion": 685441443,
         "duplicate blob": 96623,
+        "notebook outputs/metadata": 3444197,
         "dependency/build/cache": 1211
       },
       "languages": {
-        "Python": 3824790
+        "Python": 380593
       }
     },
     "Nekerworld/WON-Solution-Pass": {
@@ -386,7 +389,7 @@
     "JavaScript": 1974447,
     "CSS": 242289,
     "HTML": 353536,
-    "Python": 8414555,
+    "Python": 4191430,
     "Vue": 266863,
     "C": 115067,
     "C++": 147335,
