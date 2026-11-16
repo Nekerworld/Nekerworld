@@ -129,11 +129,11 @@
       "included_files": 4,
       "included_bytes": 19693,
       "excluded_files": 80,
-      "excluded_bytes": 2707192,
+      "excluded_bytes": 2707313,
       "reasons": {
-        "dependency/build/cache": 2114,
+        "dependency/build/cache": 2508,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676568
+        "repository exclusion": 2676295
       },
       "languages": {
         "HTML": 844,
