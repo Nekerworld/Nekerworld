@@ -3,7 +3,7 @@ name: Update language statistics
 on:
   workflow_dispatch:
   schedule:
-    - cron: '19 0 * * *'
+    - cron: '21 0 * * *'
   push:
     paths:
       - scripts/language_stats.py
