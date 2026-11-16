@@ -11,6 +11,10 @@ on:
       - scripts/language_collector.py
       - .github/workflows/language-stats.yml
 
+concurrency:
+  group: language-statistics-gh-pages
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -52,5 +56,6 @@ jobs:
           git add assets/languages.svg assets/languages-donut.svg assets/language-audit.json README.md
           if ! git diff --cached --quiet; then
             git commit -m "Update combined repository language statistics"
+            git pull --rebase origin gh-pages
             git push
           fi
