@@ -111,23 +111,6 @@
         "Python": 2912
       }
     },
-    "Nekerworld/ERD_Generator": {
-      "included_files": 196,
-      "included_bytes": 906694,
-      "excluded_files": 111,
-      "excluded_bytes": 2816097,
-      "reasons": {
-        "non-source/unsupported": 1208019,
-        "dependency/build/cache": 2579,
-        "dependency manifest": 324249,
-        "repository exclusion": 1281250
-      },
-      "languages": {
-        "JavaScript": 893001,
-        "HTML": 2194,
-        "CSS": 11499
-      }
-    },
     "Nekerworld/EU5-The-Singularity-is-Near": {
       "included_files": 104,
       "included_bytes": 801587,
@@ -146,11 +129,11 @@
       "included_files": 4,
       "included_bytes": 19693,
       "excluded_files": 80,
-      "excluded_bytes": 2706801,
+      "excluded_bytes": 2707192,
       "reasons": {
-        "dependency/build/cache": 1988,
-        "non-source/unsupported": 28380,
-        "repository exclusion": 2676433
+        "dependency/build/cache": 2114,
+        "non-source/unsupported": 28510,
+        "repository exclusion": 2676568
       },
       "languages": {
         "HTML": 844,
@@ -386,9 +369,9 @@
     }
   },
   "totals": {
-    "JavaScript": 1974447,
-    "CSS": 242289,
-    "HTML": 353536,
+    "JavaScript": 1081446,
+    "CSS": 230790,
+    "HTML": 351342,
     "Python": 4191430,
     "Vue": 266863,
     "C": 115067,
@@ -399,5 +382,5 @@
     "Kotlin": 53,
     "Dart": 587147
   },
-  "included_repositories": 21
+  "included_repositories": 20
 }
