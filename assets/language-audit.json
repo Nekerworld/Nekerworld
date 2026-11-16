@@ -144,17 +144,17 @@
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
-      "included_bytes": 18247,
-      "excluded_files": 79,
-      "excluded_bytes": 2696989,
+      "included_bytes": 18274,
+      "excluded_files": 80,
+      "excluded_bytes": 2706136,
       "reasons": {
         "dependency/build/cache": 1988,
         "non-source/unsupported": 28380,
-        "repository exclusion": 2666621
+        "repository exclusion": 2675768
       },
       "languages": {
         "HTML": 844,
-        "Python": 17403
+        "Python": 17430
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -252,32 +252,31 @@
       }
     },
     "Nekerworld/SSAFY": {
-      "included_files": 2836,
-      "included_bytes": 97221845,
-      "excluded_files": 11920,
-      "excluded_bytes": 3386361037,
+      "included_files": 234,
+      "included_bytes": 1358439,
+      "excluded_files": 14522,
+      "excluded_bytes": 3482224443,
       "reasons": {
-        "non-source/unsupported": 1222462567,
+        "non-source/unsupported": 79738831,
         "dependency/build/cache": 645332574,
-        "repository exclusion": 1518167317,
-        "duplicate blob": 303838,
+        "repository exclusion": 2756784123,
+        "duplicate blob": 274174,
         "dependency manifest": 57535,
         "generated/minified": 37206
       },
       "languages": {
-        "Python": 1575550,
+        "Python": 738646,
         "HTML": 342353,
         "Vue": 44156,
         "JavaScript": 181396,
         "CSS": 51319,
-        "C": 93793722,
-        "C++": 1228755,
+        "C": 82,
+        "C++": 101,
         "TypeScript": 42,
         "Verilog": 112,
-        "Java": 3416,
+        "Java": 129,
         "Kotlin": 53,
-        "Dart": 50,
-        "Shell": 921
+        "Dart": 50
       }
     },
     "Nekerworld/SSAFY_AI_Challenge": {
@@ -387,17 +386,16 @@
     "JavaScript": 1974447,
     "CSS": 242250,
     "HTML": 353536,
-    "Python": 9251419,
+    "Python": 8414542,
     "Vue": 266863,
     "Less": 39,
-    "C": 93908707,
-    "C++": 1375989,
+    "C": 115067,
+    "C++": 147335,
     "TypeScript": 42,
     "Verilog": 112,
-    "Java": 3416,
+    "Java": 129,
     "Kotlin": 53,
-    "Dart": 587147,
-    "Shell": 921
+    "Dart": 587147
   },
   "included_repositories": 21
 }
