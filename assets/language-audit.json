@@ -144,17 +144,17 @@
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
-      "included_bytes": 18274,
+      "included_bytes": 18287,
       "excluded_files": 80,
-      "excluded_bytes": 2706136,
+      "excluded_bytes": 2706818,
       "reasons": {
         "dependency/build/cache": 1988,
         "non-source/unsupported": 28380,
-        "repository exclusion": 2675768
+        "repository exclusion": 2676450
       },
       "languages": {
         "HTML": 844,
-        "Python": 17430
+        "Python": 17443
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -228,7 +228,7 @@
       },
       "languages": {
         "JavaScript": 2719,
-        "Less": 39
+        "CSS": 39
       }
     },
     "Nekerworld/Solar-Atlas": {
@@ -384,11 +384,10 @@
   },
   "totals": {
     "JavaScript": 1974447,
-    "CSS": 242250,
+    "CSS": 242289,
     "HTML": 353536,
-    "Python": 8414542,
+    "Python": 8414555,
     "Vue": 266863,
-    "Less": 39,
     "C": 115067,
     "C++": 147335,
     "TypeScript": 42,
