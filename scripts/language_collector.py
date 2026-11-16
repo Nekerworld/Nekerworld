@@ -1,4 +1,5 @@
 """File-level, source-only language accounting for the profile graphs."""
+import base64
 import fnmatch
 import json
 import os
@@ -92,6 +93,24 @@ def classify(repo, path):
         return None, "documentation"
     return EXTENSIONS[ext], "source"
 
+def notebook_code_bytes(endpoint, sha):
+    """Count only Python code-cell source, not outputs, attachments or metadata."""
+    blob = request(endpoint + "/git/blobs/" + urllib.parse.quote(sha, safe=""))
+    if blob.get("encoding") != "base64":
+        raise RuntimeError("Unexpected notebook blob encoding: " + sha)
+    notebook = json.loads(base64.b64decode(blob["content"]).decode("utf-8"))
+    language = notebook.get("metadata", {}).get("language_info", {}).get("name")
+    if not language:
+        language = notebook.get("metadata", {}).get("kernelspec", {}).get("language")
+    if language and language.lower() != "python":
+        return 0
+    code = []
+    for cell in notebook.get("cells", []):
+        if cell.get("cell_type") == "code":
+            source = cell.get("source", "")
+            code.append("".join(source) if isinstance(source, list) else source)
+    return sum(len(source.encode("utf-8")) for source in code)
+
 def collect():
     totals = Counter()
     included_repos = 0
@@ -125,6 +144,14 @@ def collect():
                 else:
                     if sha:
                         seen.add(key)
+            if language and path.lower().endswith(".ipynb"):
+                source_size = notebook_code_bytes(endpoint, sha)
+                excluded_size = size - source_size
+                stats["excluded_bytes"] += excluded_size
+                stats["reasons"]["notebook outputs/metadata"] += excluded_size
+                size = source_size
+                if not size:
+                    language, reason = None, "notebook without Python code"
             if language:
                 totals[language] += size
                 stats["languages"][language] += size
