@@ -29,8 +29,18 @@ jobs:
           GITHUB_PROFILE_USER: Nekerworld
           GH_STATS_TOKEN: ${{ secrets.LANGUAGE_STATS_TOKEN }}
         run: |
-          python3 scripts/language_stats.py
-          python3 scripts/language_donut.py
+          python3 - <<'PY'
+          import sys
+          sys.path.insert(0, "scripts")
+          from language_collector import collect
+          from language_stats import render as render_bar
+          from language_donut import render as render_donut
+
+          totals, completed = collect()
+          render_bar(totals, completed)
+          render_donut(totals, completed)
+          print(f"Generated both SVGs: {completed} repositories, {len(totals)} languages")
+          PY
       - name: Refresh README image URL when SVG changes
         run: |
           python3 - <<'PY'
