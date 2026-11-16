@@ -8,6 +8,7 @@ on:
     paths:
       - scripts/language_stats.py
       - scripts/language_donut.py
+      - scripts/language_collector.py
       - .github/workflows/language-stats.yml
 
 permissions:
@@ -48,7 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/languages.svg assets/languages-donut.svg README.md
+          git add assets/languages.svg assets/languages-donut.svg assets/language-audit.json README.md
           if ! git diff --cached --quiet; then
             git commit -m "Update combined repository language statistics"
             git push

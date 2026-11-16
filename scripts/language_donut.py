@@ -61,17 +61,8 @@ def render(totals, count):
     OUTPUT.write_text(svg, encoding="utf-8")
 
 def main():
-    totals = Counter()
-    completed = 0
-    for repo in repo_list():
-        name = repo["full_name"]
-        try:
-            data = request("/repos/" + "/".join(map(urllib.parse.quote, name.split("/"))) + "/languages")
-        except urllib.error.HTTPError as exc:
-            raise RuntimeError(f"Cannot read language data for {name}: HTTP {exc.code}") from exc
-        if data:
-            totals.update(normalize_languages(data))
-            completed += 1
+    from language_collector import collect
+    totals, completed = collect()
     render(totals, completed)
     print(f"Generated {OUTPUT} for {completed} repositories")
 
