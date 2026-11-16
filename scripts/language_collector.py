@@ -13,7 +13,7 @@ EXTENSIONS = {
     ".py":"Python", ".pyw":"Python", ".ipynb":"Python",
     ".js":"JavaScript", ".jsx":"JavaScript", ".mjs":"JavaScript", ".cjs":"JavaScript",
     ".ts":"TypeScript", ".tsx":"TypeScript", ".vue":"Vue",
-    ".html":"HTML", ".htm":"HTML", ".css":"CSS", ".scss":"SCSS", ".less":"Less",
+    ".html":"HTML", ".htm":"HTML", ".css":"CSS", ".scss":"CSS", ".sass":"CSS", ".less":"CSS",
     ".java":"Java", ".kt":"Kotlin", ".kts":"Kotlin", ".dart":"Dart",
     ".c":"C", ".h":"C", ".cpp":"C++", ".cc":"C++", ".cxx":"C++", ".hpp":"C++",
     ".cs":"C#", ".go":"Go", ".rs":"Rust", ".php":"PHP", ".rb":"Ruby",
