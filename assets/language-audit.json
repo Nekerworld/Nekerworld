@@ -1,0 +1,403 @@
+{
+  "repositories": {
+    "2024-Winter-BootCamp-TeamD/review-Frontend": {
+      "included_files": 53,
+      "included_bytes": 266795,
+      "excluded_files": 28,
+      "excluded_bytes": 3075681,
+      "reasons": {
+        "dependency/build/cache": 439,
+        "non-source/unsupported": 2738934,
+        "dependency manifest": 336308
+      },
+      "languages": {
+        "JavaScript": 213622,
+        "CSS": 50847,
+        "HTML": 2326
+      }
+    },
+    "Find-For-You/Firmware": {
+      "included_files": 0,
+      "included_bytes": 0,
+      "excluded_files": 2,
+      "excluded_bytes": 1193,
+      "reasons": {
+        "non-source/unsupported": 1193
+      },
+      "languages": {}
+    },
+    "Find-For-You/Structure": {
+      "included_files": 0,
+      "included_bytes": 0,
+      "excluded_files": 15,
+      "excluded_bytes": 19005866,
+      "reasons": {
+        "non-source/unsupported": 19005866
+      },
+      "languages": {}
+    },
+    "Find-For-You/Vision": {
+      "included_files": 0,
+      "included_bytes": 0,
+      "excluded_files": 1,
+      "excluded_bytes": 1672,
+      "reasons": {
+        "non-source/unsupported": 1672
+      },
+      "languages": {}
+    },
+    "Find-For-You/Web-Monitoring": {
+      "included_files": 47,
+      "included_bytes": 398293,
+      "excluded_files": 22,
+      "excluded_bytes": 5305854,
+      "reasons": {
+        "non-source/unsupported": 219378,
+        "dependency manifest": 170805,
+        "dependency/build/cache": 1531,
+        "repository exclusion": 4914140
+      },
+      "languages": {
+        "Python": 374371,
+        "JavaScript": 13789,
+        "HTML": 361,
+        "CSS": 9772
+      }
+    },
+    "KM-coporation/QuantBot": {
+      "included_files": 0,
+      "included_bytes": 0,
+      "excluded_files": 5,
+      "excluded_bytes": 10348,
+      "reasons": {
+        "non-source/unsupported": 10348
+      },
+      "languages": {}
+    },
+    "Nekerworld/Auto-bms-for-Muse-Dash": {
+      "included_files": 2,
+      "included_bytes": 62426,
+      "excluded_files": 2,
+      "excluded_bytes": 25364,
+      "reasons": {
+        "non-source/unsupported": 72,
+        "dependency/build/cache": 25292
+      },
+      "languages": {
+        "Python": 62426
+      }
+    },
+    "Nekerworld/CraftOS": {
+      "included_files": 2,
+      "included_bytes": 11532,
+      "excluded_files": 19,
+      "excluded_bytes": 45064,
+      "reasons": {
+        "non-source/unsupported": 45064
+      },
+      "languages": {
+        "JavaScript": 11532
+      }
+    },
+    "Nekerworld/Discord-Bot-Project": {
+      "included_files": 1,
+      "included_bytes": 2912,
+      "excluded_files": 2,
+      "excluded_bytes": 1569083,
+      "reasons": {
+        "non-source/unsupported": 1569083
+      },
+      "languages": {
+        "Python": 2912
+      }
+    },
+    "Nekerworld/ERD_Generator": {
+      "included_files": 196,
+      "included_bytes": 906694,
+      "excluded_files": 111,
+      "excluded_bytes": 2816097,
+      "reasons": {
+        "non-source/unsupported": 1208019,
+        "dependency/build/cache": 2579,
+        "dependency manifest": 324249,
+        "repository exclusion": 1281250
+      },
+      "languages": {
+        "JavaScript": 893001,
+        "HTML": 2194,
+        "CSS": 11499
+      }
+    },
+    "Nekerworld/EU5-The-Singularity-is-Near": {
+      "included_files": 104,
+      "included_bytes": 801587,
+      "excluded_files": 860,
+      "excluded_bytes": 75227541,
+      "reasons": {
+        "non-source/unsupported": 71167145,
+        "dependency/build/cache": 301494,
+        "unsupported game engine": 3758902
+      },
+      "languages": {
+        "Python": 801587
+      }
+    },
+    "Nekerworld/Nekerworld": {
+      "included_files": 4,
+      "included_bytes": 18247,
+      "excluded_files": 79,
+      "excluded_bytes": 2696989,
+      "reasons": {
+        "dependency/build/cache": 1988,
+        "non-source/unsupported": 28380,
+        "repository exclusion": 2666621
+      },
+      "languages": {
+        "HTML": 844,
+        "Python": 17403
+      }
+    },
+    "Nekerworld/PBDA_Teamproject": {
+      "included_files": 46,
+      "included_bytes": 940306,
+      "excluded_files": 597,
+      "excluded_bytes": 32789046,
+      "reasons": {
+        "non-source/unsupported": 8770461,
+        "repository exclusion": 20542435,
+        "duplicate blob": 2586463,
+        "dependency/build/cache": 889687
+      },
+      "languages": {
+        "Python": 940306
+      }
+    },
+    "Nekerworld/Plocal": {
+      "included_files": 22,
+      "included_bytes": 206739,
+      "excluded_files": 1572,
+      "excluded_bytes": 36490964,
+      "reasons": {
+        "non-source/unsupported": 2887133,
+        "dependency manifest": 787099,
+        "repository exclusion": 11378025,
+        "dependency/build/cache": 21438707
+      },
+      "languages": {
+        "JavaScript": 56800,
+        "HTML": 611,
+        "Vue": 149328
+      }
+    },
+    "Nekerworld/Production-System-Public": {
+      "included_files": 3,
+      "included_bytes": 20281,
+      "excluded_files": 8,
+      "excluded_bytes": 20497,
+      "reasons": {
+        "non-source/unsupported": 20497,
+        "duplicate blob": 0
+      },
+      "languages": {
+        "Python": 20281
+      }
+    },
+    "Nekerworld/Production_System_TeamProject": {
+      "included_files": 4,
+      "included_bytes": 23492,
+      "excluded_files": 3,
+      "excluded_bytes": 8673,
+      "reasons": {
+        "non-source/unsupported": 8673
+      },
+      "languages": {
+        "Python": 23492
+      }
+    },
+    "Nekerworld/Smart_Farm": {
+      "included_files": 6,
+      "included_bytes": 2758,
+      "excluded_files": 3411,
+      "excluded_bytes": 40900357,
+      "reasons": {
+        "outside source tree": 22178,
+        "dependency/build/cache": 32648825,
+        "repository exclusion": 8216370,
+        "dependency manifest": 12858,
+        "non-source/unsupported": 126
+      },
+      "languages": {
+        "JavaScript": 2719,
+        "Less": 39
+      }
+    },
+    "Nekerworld/Solar-Atlas": {
+      "included_files": 153,
+      "included_bytes": 667058,
+      "excluded_files": 5401,
+      "excluded_bytes": 999700713,
+      "reasons": {
+        "dependency/build/cache": 117284101,
+        "non-source/unsupported": 195600,
+        "duplicate blob": 0,
+        "repository exclusion": 882163883,
+        "dependency manifest": 57129
+      },
+      "languages": {
+        "Python": 323683,
+        "HTML": 1304,
+        "JavaScript": 256974,
+        "Vue": 73379,
+        "CSS": 11718
+      }
+    },
+    "Nekerworld/SSAFY": {
+      "included_files": 2836,
+      "included_bytes": 97221845,
+      "excluded_files": 11920,
+      "excluded_bytes": 3386361037,
+      "reasons": {
+        "non-source/unsupported": 1222462567,
+        "dependency/build/cache": 645332574,
+        "repository exclusion": 1518167317,
+        "duplicate blob": 303838,
+        "dependency manifest": 57535,
+        "generated/minified": 37206
+      },
+      "languages": {
+        "Python": 1575550,
+        "HTML": 342353,
+        "Vue": 44156,
+        "JavaScript": 181396,
+        "CSS": 51319,
+        "C": 93793722,
+        "C++": 1228755,
+        "TypeScript": 42,
+        "Verilog": 112,
+        "Java": 3416,
+        "Kotlin": 53,
+        "Dart": 50,
+        "Shell": 921
+      }
+    },
+    "Nekerworld/SSAFY_AI_Challenge": {
+      "included_files": 8,
+      "included_bytes": 922841,
+      "excluded_files": 44,
+      "excluded_bytes": 135481030,
+      "reasons": {
+        "non-source/unsupported": 103655530,
+        "repository exclusion": 31752359,
+        "duplicate blob": 73141
+      },
+      "languages": {
+        "Python": 922841
+      }
+    },
+    "Nekerworld/SSAFY_Study": {
+      "included_files": 51,
+      "included_bytes": 77916,
+      "excluded_files": 140,
+      "excluded_bytes": 472294985,
+      "reasons": {
+        "dependency/build/cache": 3859,
+        "non-source/unsupported": 472290484,
+        "duplicate blob": 642
+      },
+      "languages": {
+        "Python": 77916
+      }
+    },
+    "Nekerworld/Techeer_Personal": {
+      "included_files": 0,
+      "included_bytes": 0,
+      "excluded_files": 1,
+      "excluded_bytes": 67,
+      "reasons": {
+        "non-source/unsupported": 67
+      },
+      "languages": {}
+    },
+    "Nekerworld/TUK": {
+      "included_files": 45,
+      "included_bytes": 3824790,
+      "excluded_files": 3010,
+      "excluded_bytes": 2276175795,
+      "reasons": {
+        "non-source/unsupported": 1590636518,
+        "repository exclusion": 685441443,
+        "duplicate blob": 96623,
+        "dependency/build/cache": 1211
+      },
+      "languages": {
+        "Python": 3824790
+      }
+    },
+    "Nekerworld/WON-Solution-Pass": {
+      "included_files": 63,
+      "included_bytes": 1042349,
+      "excluded_files": 138,
+      "excluded_bytes": 11102724,
+      "reasons": {
+        "dependency/build/cache": 1772,
+        "non-source/unsupported": 10657351,
+        "repository exclusion": 432545,
+        "dependency manifest": 11056
+      },
+      "languages": {
+        "Dart": 587097,
+        "CSS": 107095,
+        "HTML": 3543,
+        "JavaScript": 344614
+      }
+    },
+    "Wake-Up-It-s-a-Hospital/Distance-Control": {
+      "included_files": 4,
+      "included_bytes": 29336,
+      "excluded_files": 4,
+      "excluded_bytes": 4921,
+      "reasons": {
+        "dependency/build/cache": 476,
+        "non-source/unsupported": 4445
+      },
+      "languages": {
+        "C++": 29336
+      }
+    },
+    "Wake-Up-It-s-a-Hospital/Smart-Feature": {
+      "included_files": 46,
+      "included_bytes": 516744,
+      "excluded_files": 16211,
+      "excluded_bytes": 345150438,
+      "reasons": {
+        "dependency/build/cache": 221228442,
+        "non-source/unsupported": 123284953,
+        "duplicate blob": 32278,
+        "dependency manifest": 170897,
+        "repository exclusion": 433868
+      },
+      "languages": {
+        "Python": 283861,
+        "C++": 117898,
+        "C": 114985
+      }
+    }
+  },
+  "totals": {
+    "JavaScript": 1974447,
+    "CSS": 242250,
+    "HTML": 353536,
+    "Python": 9251419,
+    "Vue": 266863,
+    "Less": 39,
+    "C": 93908707,
+    "C++": 1375989,
+    "TypeScript": 42,
+    "Verilog": 112,
+    "Java": 3416,
+    "Kotlin": 53,
+    "Dart": 587147,
+    "Shell": 921
+  },
+  "included_repositories": 21
+}
