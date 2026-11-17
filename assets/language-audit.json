@@ -112,17 +112,17 @@
       }
     },
     "Nekerworld/EU5-The-Singularity-is-Near": {
-      "included_files": 104,
-      "included_bytes": 801587,
-      "excluded_files": 860,
-      "excluded_bytes": 75227541,
+      "included_files": 122,
+      "included_bytes": 944343,
+      "excluded_files": 924,
+      "excluded_bytes": 76417861,
       "reasons": {
-        "non-source/unsupported": 71167145,
+        "non-source/unsupported": 72158608,
         "dependency/build/cache": 301494,
-        "unsupported game engine": 3758902
+        "unsupported game engine": 3957759
       },
       "languages": {
-        "Python": 801587
+        "Python": 944343
       }
     },
     "Nekerworld/Nekerworld": {
@@ -320,20 +320,20 @@
     },
     "Nekerworld/WON-Solution-Pass": {
       "included_files": 63,
-      "included_bytes": 1042349,
+      "included_bytes": 1043251,
       "excluded_files": 138,
-      "excluded_bytes": 11102724,
+      "excluded_bytes": 11103411,
       "reasons": {
         "dependency/build/cache": 1772,
-        "non-source/unsupported": 10657351,
+        "non-source/unsupported": 10658038,
         "repository exclusion": 432545,
         "dependency manifest": 11056
       },
       "languages": {
         "Dart": 587097,
-        "CSS": 107095,
-        "HTML": 3543,
-        "JavaScript": 344614
+        "CSS": 114408,
+        "HTML": 3667,
+        "JavaScript": 338079
       }
     },
     "Wake-Up-It-s-a-Hospital/Distance-Control": {
@@ -369,10 +369,10 @@
     }
   },
   "totals": {
-    "JavaScript": 1081446,
-    "CSS": 230790,
-    "HTML": 351342,
-    "Python": 4191430,
+    "JavaScript": 1074911,
+    "CSS": 238103,
+    "HTML": 351466,
+    "Python": 4334186,
     "Vue": 266863,
     "C": 115067,
     "C++": 147335,
