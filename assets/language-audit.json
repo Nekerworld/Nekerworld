@@ -127,17 +127,17 @@
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
-      "included_bytes": 19693,
+      "included_bytes": 19867,
       "excluded_files": 80,
-      "excluded_bytes": 2707312,
+      "excluded_bytes": 2707057,
       "reasons": {
         "dependency/build/cache": 2508,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676294
+        "repository exclusion": 2676039
       },
       "languages": {
         "HTML": 844,
-        "Python": 18849
+        "Python": 19023
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -235,41 +235,42 @@
       }
     },
     "Nekerworld/Solar-Atlas-2.0": {
-      "included_files": 103,
-      "included_bytes": 25542825,
-      "excluded_files": 5463,
-      "excluded_bytes": 975642118,
+      "included_files": 43,
+      "included_bytes": 232601,
+      "excluded_files": 5567,
+      "excluded_bytes": 1001358427,
       "reasons": {
+        "non-source/unsupported": 1210697,
         "dependency/build/cache": 117284101,
-        "non-source/unsupported": 857633830,
-        "duplicate blob": 667058,
-        "dependency manifest": 57129
+        "duplicate blob": 642269,
+        "repository exclusion": 882163883,
+        "dependency manifest": 57477
       },
       "languages": {
-        "Python": 10576,
-        "HTML": 24930565,
-        "JavaScript": 601684
+        "Python": 147182,
+        "Vue": 53582,
+        "JavaScript": 31837
       }
     },
     "Nekerworld/SSAFY": {
-      "included_files": 234,
-      "included_bytes": 1199574,
-      "excluded_files": 9592,
-      "excluded_bytes": 3520296852,
+      "included_files": 337,
+      "included_bytes": 26742399,
+      "excluded_files": 9489,
+      "excluded_bytes": 3494754027,
       "reasons": {
         "non-source/unsupported": 880113312,
         "dependency/build/cache": 117287029,
         "notebook outputs/metadata": 168134,
         "repository exclusion": 2470639562,
-        "duplicate blob": 51958419,
+        "duplicate blob": 26415594,
         "dependency manifest": 114664,
         "generated/minified": 15732
       },
       "languages": {
-        "Python": 570512,
-        "HTML": 389554,
+        "Python": 581088,
+        "HTML": 25320119,
+        "JavaScript": 745148,
         "Vue": 44156,
-        "JavaScript": 143464,
         "CSS": 51319,
         "C": 82,
         "C++": 101,
@@ -336,21 +337,21 @@
       }
     },
     "Nekerworld/WON-Solution-Pass": {
-      "included_files": 63,
-      "included_bytes": 1064487,
+      "included_files": 67,
+      "included_bytes": 1126030,
       "excluded_files": 138,
-      "excluded_bytes": 11103575,
+      "excluded_bytes": 11102376,
       "reasons": {
         "dependency/build/cache": 1772,
-        "non-source/unsupported": 10658425,
+        "non-source/unsupported": 10657226,
         "repository exclusion": 432545,
         "dependency manifest": 10833
       },
       "languages": {
         "Dart": 587097,
-        "CSS": 118574,
-        "HTML": 3676,
-        "JavaScript": 355140
+        "CSS": 122416,
+        "HTML": 3872,
+        "JavaScript": 412645
       }
     },
     "Wake-Up-It-s-a-Hospital/Distance-Control": {
@@ -386,11 +387,11 @@
     }
   },
   "totals": {
-    "JavaScript": 1655724,
-    "CSS": 242269,
-    "HTML": 25329241,
-    "Python": 4344762,
-    "Vue": 266863,
+    "JavaScript": 1745066,
+    "CSS": 246111,
+    "HTML": 25329437,
+    "Python": 4492118,
+    "Vue": 320445,
     "C": 115067,
     "C++": 147335,
     "TypeScript": 42,
