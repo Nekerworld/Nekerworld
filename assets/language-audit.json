@@ -127,17 +127,17 @@
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
-      "included_bytes": 19867,
+      "included_bytes": 19871,
       "excluded_files": 80,
-      "excluded_bytes": 2707057,
+      "excluded_bytes": 2707095,
       "reasons": {
         "dependency/build/cache": 2508,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676039
+        "repository exclusion": 2676077
       },
       "languages": {
         "HTML": 844,
-        "Python": 19023
+        "Python": 19027
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -253,24 +253,24 @@
       }
     },
     "Nekerworld/SSAFY": {
-      "included_files": 337,
-      "included_bytes": 26742399,
-      "excluded_files": 9489,
-      "excluded_bytes": 3494754027,
+      "included_files": 243,
+      "included_bytes": 1163854,
+      "excluded_files": 9583,
+      "excluded_bytes": 3520332572,
       "reasons": {
-        "non-source/unsupported": 880113312,
+        "non-source/unsupported": 332466758,
         "dependency/build/cache": 117287029,
         "notebook outputs/metadata": 168134,
-        "repository exclusion": 2470639562,
-        "duplicate blob": 26415594,
+        "repository exclusion": 3069339023,
+        "duplicate blob": 941232,
         "dependency manifest": 114664,
         "generated/minified": 15732
       },
       "languages": {
         "Python": 581088,
-        "HTML": 25320119,
-        "JavaScript": 745148,
+        "HTML": 343258,
         "Vue": 44156,
+        "JavaScript": 143464,
         "CSS": 51319,
         "C": 82,
         "C++": 101,
@@ -387,10 +387,10 @@
     }
   },
   "totals": {
-    "JavaScript": 1745066,
+    "JavaScript": 1143382,
     "CSS": 246111,
-    "HTML": 25329437,
-    "Python": 4492118,
+    "HTML": 352576,
+    "Python": 4492122,
     "Vue": 320445,
     "C": 115067,
     "C++": 147335,
