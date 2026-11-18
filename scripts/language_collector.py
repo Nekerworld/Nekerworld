@@ -40,6 +40,8 @@ EXCLUDED_PATHS = {
         "**/ensemble/**/merge/**","**/best_adapter/**","**/model/*.safetensors"),
     "Nekerworld/Solar-Atlas": ("crawling/data/**","backend/rag_runtime/wiki_cache/**",
         "backend/rag_runtime/documents/**","frontend/public/assets/**","data/**"),
+    "Nekerworld/Solar-Atlas-2.0": ("crawling/data/**","backend/rag_runtime/wiki_cache/**",
+        "backend/rag_runtime/documents/**","frontend/public/assets/**","data/**"),
     "Nekerworld/TUK": ("**/data/MNIST/**","**/data/mnist/**","**/강의자료/**","**/실습자료/**",
         "**/report/**","**/Report/**"),
     "Nekerworld/Plocal": ("localhub/src/data/**",),
