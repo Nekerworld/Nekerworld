@@ -129,11 +129,11 @@
       "included_files": 4,
       "included_bytes": 19871,
       "excluded_files": 80,
-      "excluded_bytes": 2707095,
+      "excluded_bytes": 2707635,
       "reasons": {
         "dependency/build/cache": 2508,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676077
+        "repository exclusion": 2676617
       },
       "languages": {
         "HTML": 844,
@@ -337,21 +337,21 @@
       }
     },
     "Nekerworld/WON-Solution-Pass": {
-      "included_files": 67,
-      "included_bytes": 1126030,
+      "included_files": 69,
+      "included_bytes": 1274158,
       "excluded_files": 138,
-      "excluded_bytes": 11102376,
+      "excluded_bytes": 11105449,
       "reasons": {
         "dependency/build/cache": 1772,
-        "non-source/unsupported": 10657226,
+        "non-source/unsupported": 10660299,
         "repository exclusion": 432545,
         "dependency manifest": 10833
       },
       "languages": {
         "Dart": 587097,
-        "CSS": 122416,
-        "HTML": 3872,
-        "JavaScript": 412645
+        "CSS": 134324,
+        "HTML": 4295,
+        "JavaScript": 548442
       }
     },
     "Wake-Up-It-s-a-Hospital/Distance-Control": {
@@ -387,9 +387,9 @@
     }
   },
   "totals": {
-    "JavaScript": 1143382,
-    "CSS": 246111,
-    "HTML": 352576,
+    "JavaScript": 1279179,
+    "CSS": 258019,
+    "HTML": 352999,
     "Python": 4492122,
     "Vue": 320445,
     "C": 115067,
