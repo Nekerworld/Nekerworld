@@ -127,17 +127,17 @@
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
-      "included_bytes": 19871,
+      "included_bytes": 19896,
       "excluded_files": 80,
-      "excluded_bytes": 2707635,
+      "excluded_bytes": 2707634,
       "reasons": {
         "dependency/build/cache": 2508,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676617
+        "repository exclusion": 2676616
       },
       "languages": {
         "HTML": 844,
-        "Python": 19027
+        "Python": 19052
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -215,62 +215,44 @@
       }
     },
     "Nekerworld/Solar-Atlas": {
-      "included_files": 153,
-      "included_bytes": 667058,
-      "excluded_files": 5401,
-      "excluded_bytes": 999700713,
+      "included_files": 194,
+      "included_bytes": 1027379,
+      "excluded_files": 8286,
+      "excluded_bytes": 1385860476,
       "reasons": {
-        "dependency/build/cache": 117284101,
-        "non-source/unsupported": 195600,
+        "non-source/unsupported": 2094005,
+        "dependency/build/cache": 117284146,
         "duplicate blob": 0,
-        "repository exclusion": 882163883,
-        "dependency manifest": 57129
+        "repository exclusion": 1266424848,
+        "dependency manifest": 57477
       },
       "languages": {
         "Python": 323683,
         "HTML": 1304,
-        "JavaScript": 256974,
-        "Vue": 73379,
+        "JavaScript": 507012,
+        "Vue": 183662,
         "CSS": 11718
       }
     },
-    "Nekerworld/Solar-Atlas-2.0": {
-      "included_files": 62,
-      "included_bytes": 337360,
-      "excluded_files": 5558,
-      "excluded_bytes": 1000578657,
-      "reasons": {
-        "non-source/unsupported": 474699,
-        "dependency/build/cache": 117284101,
-        "duplicate blob": 598497,
-        "repository exclusion": 882163883,
-        "dependency manifest": 57477
-      },
-      "languages": {
-        "Python": 245199,
-        "Vue": 42873,
-        "JavaScript": 49288
-      }
-    },
     "Nekerworld/SSAFY": {
-      "included_files": 243,
-      "included_bytes": 1163854,
-      "excluded_files": 9583,
-      "excluded_bytes": 3520332572,
+      "included_files": 251,
+      "included_bytes": 1207074,
+      "excluded_files": 9575,
+      "excluded_bytes": 3520289352,
       "reasons": {
         "non-source/unsupported": 332466758,
         "dependency/build/cache": 117287029,
         "notebook outputs/metadata": 168134,
         "repository exclusion": 3069339023,
-        "duplicate blob": 941232,
+        "duplicate blob": 898012,
         "dependency manifest": 114664,
         "generated/minified": 15732
       },
       "languages": {
         "Python": 581088,
         "HTML": 343258,
-        "Vue": 44156,
-        "JavaScript": 143464,
+        "Vue": 74069,
+        "JavaScript": 156771,
         "CSS": 51319,
         "C": 82,
         "C++": 101,
@@ -387,11 +369,11 @@
     }
   },
   "totals": {
-    "JavaScript": 1296630,
+    "JavaScript": 1510687,
     "CSS": 258019,
     "HTML": 352999,
-    "Python": 4590139,
-    "Vue": 309736,
+    "Python": 4344965,
+    "Vue": 407059,
     "C": 115067,
     "C++": 147335,
     "TypeScript": 42,
@@ -400,5 +382,5 @@
     "Kotlin": 53,
     "Dart": 587147
   },
-  "included_repositories": 21
+  "included_repositories": 20
 }
