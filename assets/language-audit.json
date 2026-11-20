@@ -235,21 +235,21 @@
       }
     },
     "Nekerworld/Solar-Atlas-2.0": {
-      "included_files": 43,
-      "included_bytes": 232601,
-      "excluded_files": 5567,
-      "excluded_bytes": 1001358427,
+      "included_files": 62,
+      "included_bytes": 337360,
+      "excluded_files": 5558,
+      "excluded_bytes": 1000578657,
       "reasons": {
-        "non-source/unsupported": 1210697,
+        "non-source/unsupported": 474699,
         "dependency/build/cache": 117284101,
-        "duplicate blob": 642269,
+        "duplicate blob": 598497,
         "repository exclusion": 882163883,
         "dependency manifest": 57477
       },
       "languages": {
-        "Python": 147182,
-        "Vue": 53582,
-        "JavaScript": 31837
+        "Python": 245199,
+        "Vue": 42873,
+        "JavaScript": 49288
       }
     },
     "Nekerworld/SSAFY": {
@@ -387,11 +387,11 @@
     }
   },
   "totals": {
-    "JavaScript": 1279179,
+    "JavaScript": 1296630,
     "CSS": 258019,
     "HTML": 352999,
-    "Python": 4492122,
-    "Vue": 320445,
+    "Python": 4590139,
+    "Vue": 309736,
     "C": 115067,
     "C++": 147335,
     "TypeScript": 42,
