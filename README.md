@@ -219,7 +219,7 @@ Techeer Winter BootCamp **공동 3위**
 # ◇ 기술 스택
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nekerworld/Nekerworld/gh-pages/assets/languages-donut.svg?v=c11feacd9dad" width="760" alt="Programming language distribution across personal and organization repositories" />
+  <img src="https://raw.githubusercontent.com/Nekerworld/Nekerworld/gh-pages/assets/languages-donut.svg?v=d2ec7075d90e" width="760" alt="Programming language distribution across personal and organization repositories" />
 </p>
 
 | 카테고리 | 기술 스택 |
