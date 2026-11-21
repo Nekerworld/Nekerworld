@@ -112,28 +112,28 @@
       }
     },
     "Nekerworld/EU5-The-Singularity-is-Near": {
-      "included_files": 122,
-      "included_bytes": 944343,
-      "excluded_files": 924,
-      "excluded_bytes": 76417861,
+      "included_files": 147,
+      "included_bytes": 1294586,
+      "excluded_files": 1040,
+      "excluded_bytes": 82516866,
       "reasons": {
-        "non-source/unsupported": 72158608,
+        "non-source/unsupported": 77276201,
         "dependency/build/cache": 301494,
-        "unsupported game engine": 3957759
+        "unsupported game engine": 4939171
       },
       "languages": {
-        "Python": 944343
+        "Python": 1294586
       }
     },
     "Nekerworld/Nekerworld": {
       "included_files": 4,
       "included_bytes": 19896,
       "excluded_files": 80,
-      "excluded_bytes": 2707634,
+      "excluded_bytes": 2707136,
       "reasons": {
         "dependency/build/cache": 2508,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676616
+        "repository exclusion": 2676118
       },
       "languages": {
         "HTML": 844,
@@ -319,8 +319,8 @@
       }
     },
     "Nekerworld/WON-Solution-Pass": {
-      "included_files": 69,
-      "included_bytes": 1274158,
+      "included_files": 75,
+      "included_bytes": 1508201,
       "excluded_files": 138,
       "excluded_bytes": 11105449,
       "reasons": {
@@ -330,7 +330,7 @@
         "dependency manifest": 10833
       },
       "languages": {
-        "Dart": 587097,
+        "Dart": 821140,
         "CSS": 134324,
         "HTML": 4295,
         "JavaScript": 548442
@@ -372,7 +372,7 @@
     "JavaScript": 1510687,
     "CSS": 258019,
     "HTML": 352999,
-    "Python": 4344965,
+    "Python": 4695208,
     "Vue": 407059,
     "C": 115067,
     "C++": 147335,
@@ -380,7 +380,7 @@
     "Verilog": 112,
     "Java": 129,
     "Kotlin": 53,
-    "Dart": 587147
+    "Dart": 821190
   },
   "included_repositories": 20
 }
