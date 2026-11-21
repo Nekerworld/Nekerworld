@@ -65,7 +65,7 @@ EXCLUDED_PATHS = {
 ENGINE_PATHS = ("in_game/**","main_menu/**","era_*/in_game/**","era_*/main_menu/**")
 ENGINE_SUFFIXES = {".txt",".gui",".yml",".yaml"}
 REPO_SOURCE_ONLY = {
-    "Nekerworld/Orbis": ("Assets/Orbis/**/*.cs", "tools/**/*.py"),
+    "Nekerworld/Orbis": ("Assets/Orbis/**/*.cs", "tools/*.py"),
     "Nekerworld/Smart_Farm": ("src/**",),
 }
 def matches(path, pattern):
