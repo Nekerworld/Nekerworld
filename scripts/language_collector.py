@@ -55,6 +55,8 @@ EXCLUDED_PATHS = {
         "androidflutterproject/macos/**","androidflutterproject/windows/**",
         "androidflutterproject/web/**","androidflutterproject/.dart_tool/**",
         "androidflutterproject/.flutter-plugins*"),
+    # Unity 6: source owned by Orbis, not engine templates or generated assets.
+    "Nekerworld/Orbis": ("Assets/Welcome/**",),
     "Nekerworld/Nekerworld": ("assets/**",),
     "Find-For-You/Web-Monitoring": ("streamlit/dummy_data.json",),
     "Wake-Up-It-s-a-Hospital/Smart-Feature": ("**/dummy_data/**",),
@@ -63,6 +65,7 @@ EXCLUDED_PATHS = {
 ENGINE_PATHS = ("in_game/**","main_menu/**","era_*/in_game/**","era_*/main_menu/**")
 ENGINE_SUFFIXES = {".txt",".gui",".yml",".yaml"}
 REPO_SOURCE_ONLY = {
+    "Nekerworld/Orbis": ("Assets/Orbis/**/*.cs", "tools/**/*.py"),
     "Nekerworld/Smart_Farm": ("src/**",),
 }
 def matches(path, pattern):
@@ -83,6 +86,7 @@ def classify(repo, path):
         return None, "dependency manifest"
     if any(matches(path, p) for p in EXCLUDED_PATHS.get(repo, ())):
         return None, "repository exclusion"
+    # Project-specific allowlists are applied before extension classification.
     if repo in REPO_SOURCE_ONLY and not any(matches(path,p) for p in REPO_SOURCE_ONLY[repo]):
         return None, "outside source tree"
     if repo == "Nekerworld/EU5-The-Singularity-is-Near":
