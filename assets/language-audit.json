@@ -128,11 +128,11 @@
       "included_files": 4,
       "included_bytes": 20167,
       "excluded_files": 80,
-      "excluded_bytes": 2708004,
+      "excluded_bytes": 2708185,
       "reasons": {
         "dependency/build/cache": 2648,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2676846
+        "repository exclusion": 2677027
       },
       "languages": {
         "HTML": 844,
@@ -140,18 +140,18 @@
       }
     },
     "Nekerworld/Orbis": {
-      "included_files": 41,
-      "included_bytes": 257607,
-      "excluded_files": 191,
-      "excluded_bytes": 25116410,
+      "included_files": 50,
+      "included_bytes": 425113,
+      "excluded_files": 215,
+      "excluded_bytes": 50888805,
       "reasons": {
-        "outside source tree": 25105743,
-        "dependency/build/cache": 2080,
+        "outside source tree": 50865841,
+        "dependency/build/cache": 14377,
         "repository exclusion": 8587
       },
       "languages": {
-        "C#": 216419,
-        "Python": 41188
+        "C#": 309451,
+        "Python": 115662
       }
     },
     "Nekerworld/PBDA_Teamproject": {
@@ -231,13 +231,13 @@
     "Nekerworld/Solar-Atlas": {
       "included_files": 194,
       "included_bytes": 1027379,
-      "excluded_files": 8286,
-      "excluded_bytes": 1385860476,
+      "excluded_files": 8285,
+      "excluded_bytes": 1385326384,
       "reasons": {
-        "non-source/unsupported": 2094005,
+        "non-source/unsupported": 2087080,
         "dependency/build/cache": 117284146,
         "duplicate blob": 0,
-        "repository exclusion": 1266424848,
+        "repository exclusion": 1265897681,
         "dependency manifest": 57477
       },
       "languages": {
@@ -251,13 +251,13 @@
     "Nekerworld/SSAFY": {
       "included_files": 251,
       "included_bytes": 1207074,
-      "excluded_files": 9575,
-      "excluded_bytes": 3520289352,
+      "excluded_files": 9578,
+      "excluded_bytes": 3558896325,
       "reasons": {
         "non-source/unsupported": 332466758,
         "dependency/build/cache": 117287029,
         "notebook outputs/metadata": 168134,
-        "repository exclusion": 3069339023,
+        "repository exclusion": 3107945996,
         "duplicate blob": 898012,
         "dependency manifest": 114664,
         "generated/minified": 15732
@@ -386,8 +386,8 @@
     "JavaScript": 1510687,
     "CSS": 258019,
     "HTML": 352999,
-    "Python": 4736667,
-    "C#": 216419,
+    "Python": 4811141,
+    "C#": 309451,
     "Vue": 407059,
     "C": 115067,
     "C++": 147335,
