@@ -128,11 +128,11 @@
       "included_files": 4,
       "included_bytes": 20167,
       "excluded_files": 80,
-      "excluded_bytes": 2708185,
+      "excluded_bytes": 2708187,
       "reasons": {
         "dependency/build/cache": 2648,
         "non-source/unsupported": 28510,
-        "repository exclusion": 2677027
+        "repository exclusion": 2677029
       },
       "languages": {
         "HTML": 844,
@@ -248,25 +248,43 @@
         "CSS": 11718
       }
     },
+    "Nekerworld/solar-atlas-the-next": {
+      "included_files": 192,
+      "included_bytes": 36472845,
+      "excluded_files": 8361,
+      "excluded_bytes": 1350732612,
+      "reasons": {
+        "non-source/unsupported": 1232645402,
+        "duplicate blob": 746817,
+        "dependency/build/cache": 117282916,
+        "dependency manifest": 57477
+      },
+      "languages": {
+        "Python": 319616,
+        "HTML": 24929982,
+        "JavaScript": 11112375,
+        "Vue": 110872
+      }
+    },
     "Nekerworld/SSAFY": {
       "included_files": 251,
-      "included_bytes": 1207074,
-      "excluded_files": 9578,
-      "excluded_bytes": 3558896325,
+      "included_bytes": 1200775,
+      "excluded_files": 9580,
+      "excluded_bytes": 3558903236,
       "reasons": {
         "non-source/unsupported": 332466758,
         "dependency/build/cache": 117287029,
         "notebook outputs/metadata": 168134,
         "repository exclusion": 3107945996,
-        "duplicate blob": 898012,
+        "duplicate blob": 904923,
         "dependency manifest": 114664,
         "generated/minified": 15732
       },
       "languages": {
         "Python": 581088,
-        "HTML": 343258,
+        "HTML": 343689,
         "Vue": 74069,
-        "JavaScript": 156771,
+        "JavaScript": 150041,
         "CSS": 51319,
         "C": 82,
         "C++": 101,
@@ -383,12 +401,12 @@
     }
   },
   "totals": {
-    "JavaScript": 1510687,
+    "JavaScript": 12616332,
     "CSS": 258019,
-    "HTML": 352999,
-    "Python": 4811141,
+    "HTML": 25283412,
+    "Python": 5130757,
     "C#": 309451,
-    "Vue": 407059,
+    "Vue": 517931,
     "C": 115067,
     "C++": 147335,
     "TypeScript": 42,
@@ -397,5 +415,5 @@
     "Kotlin": 53,
     "Dart": 821190
   },
-  "included_repositories": 21
+  "included_repositories": 22
 }
