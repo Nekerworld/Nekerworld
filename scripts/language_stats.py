@@ -12,6 +12,7 @@ USER = os.environ.get("GITHUB_PROFILE_USER", "Nekerworld")
 TOKEN = os.environ.get("GH_STATS_TOKEN") or os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 OUTPUT = Path("assets/languages.svg")
 EXCLUDED = {".github"}
+EXCLUDED_REPOSITORIES = {"nekerworld/solar-atlas-the-next"}
 SKIP_FORKS = True
 SKIP_ARCHIVED = True
 PALETTE = {"Python": "#3572A5", "JavaScript": "#f1e05a", "TypeScript": "#3178c6", "C": "#555555", "C++": "#f34b7d", "C#": "#178600", "HTML": "#e34c26", "CSS": "#563d7c", "Java": "#b07219", "Jupyter Notebook": "#DA5B0B", "Shell": "#89e051", "Verilog": "#b2b7f8", "Vue": "#41b883", "Dart": "#00B4AB", "Kotlin": "#A97BFF", "Go": "#00ADD8", "Rust": "#dea584", "PHP": "#4F5D95"}
@@ -70,7 +71,11 @@ def repo_list():
         repos[name] = request("/repos/" + "/".join(map(urllib.parse.quote, name.split("/"))))
 
     # No fork or archived exclusions: 'all' means all accessible selected repos.
-    return sorted(repos.values(), key=lambda r: r["full_name"].lower())
+    # Temporary development repositories must not enter language accounting.
+    return sorted(
+        (r for r in repos.values() if r["full_name"].lower() not in EXCLUDED_REPOSITORIES),
+        key=lambda r: r["full_name"].lower(),
+    )
 
 def normalize_languages(languages):
     """Exclude non-programming Text and selected languages; merge notebooks into Python."""
