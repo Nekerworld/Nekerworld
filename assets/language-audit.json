@@ -251,13 +251,13 @@
     "Nekerworld/SSAFY": {
       "included_files": 253,
       "included_bytes": 1207686,
-      "excluded_files": 9578,
-      "excluded_bytes": 3558896325,
+      "excluded_files": 9583,
+      "excluded_bytes": 3633600944,
       "reasons": {
         "non-source/unsupported": 332466758,
         "dependency/build/cache": 117287029,
         "notebook outputs/metadata": 168134,
-        "repository exclusion": 3107945996,
+        "repository exclusion": 3182650615,
         "duplicate blob": 898012,
         "dependency manifest": 114664,
         "generated/minified": 15732
